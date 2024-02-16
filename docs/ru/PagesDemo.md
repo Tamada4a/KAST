@@ -72,7 +72,6 @@
 <li>Составы команд.</li>
 <li>Таблица со статистикой игроков на карте.</li>
 <li>История событий в ходе матча - логи.</li>
-<br></br>
  
 ![Верхняя часть матча](https://github.com/Tamada4a/KAST/blob/main/assets/19.%20Match%20page%20upper.png)
 
