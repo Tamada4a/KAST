@@ -1,0 +1,11 @@
+.statistic_team_block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 2px;
+    width: 648px;
+    min-height: 32px;
+    height: fit-content;
+}

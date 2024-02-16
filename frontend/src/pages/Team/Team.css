@@ -1,0 +1,60 @@
+/*Прямоугольник для отображения игроков команды*/
+.team_rectangle {
+    width: fit-content;
+    height: auto;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 15px 0px;
+    gap: 20px;
+
+    background: var(--base-09);
+}
+
+/*Линия под фотками*/
+.devider_line {
+    position: relative;
+    width: 743px;
+    height: 0px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    border: 1px solid var(--base-08);
+}
+
+.leave_team {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 7px 10px;
+    gap: 10px;
+    color: #FF1E1E;
+    width: 150px;
+    height: 19px;
+    cursor: pointer;
+    border: 1px solid #FF1E1E;
+    margin: 0 auto;
+    margin-top: 30px;
+    transition: color 0.3s 0s linear;
+}
+
+.leave_team p {
+    font-family: var(--text-medium-lcg);
+    font-size: 16px;
+
+}
+
+.leave_team:hover {
+    color: #cb0f0f;
+
+
+
+
+}

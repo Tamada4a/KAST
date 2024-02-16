@@ -1,0 +1,108 @@
+.event_header {
+    margin: 0 auto;
+
+    width: 715px;
+    height: auto;
+    padding: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: var(--base-09);
+}
+
+.info_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    gap: 3px;
+}
+
+.info_wrapper p {
+    font-family: var(--text-regular-lcg);
+    color: white;
+    font-size: 14px;
+    margin: 0;
+
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.info_wrapper span {
+    font-family: var(--text-regular-lcg);
+    color: var(--white40);
+    font-size: 12px;
+}
+
+.event_date_wrapper {
+    width: 179px;
+}
+
+.event_prize_wrapper {
+    width: 72px;
+}
+
+.event_fee_wrapper {
+    width: 71px;
+}
+
+.event_team_wrapper {
+    width: 63px;
+}
+
+.event_type_wrapper {
+    width: 45px;
+}
+
+.event_format_wrapper {
+    width: 47px;
+}
+
+.event_location_wrapper {
+    width: 135px;
+}
+
+.event_image_header {
+    z-index: -1;
+    margin: 0 auto;
+
+    width: 745px;
+    height: 148px;
+    overflow: hidden;
+    object-position: center;
+    position: relative;
+}
+
+.event_image_header img {
+    margin: -5px 0px 0px -100px;
+}
+
+.crop_header img {
+    width: 940px;
+    height: 230px;
+}
+
+.event_tabs {
+    margin: 0 auto;
+    padding: 25px 0px 0px;
+
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    list-style-type: none;
+
+    gap: 90px;
+}
+
+.event-registration-wrapper{
+    align-items: center;
+    margin-top: 15px;
+}

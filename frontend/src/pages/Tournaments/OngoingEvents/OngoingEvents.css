@@ -1,0 +1,76 @@
+/*Надписи Текщуие и Грядущие турниры*/
+.events_header {
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 745px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+
+    padding-top: 25px;
+    padding-bottom: 10px;
+}
+
+.events_header p {
+    font-family: var(--text-medium-lcg);
+    font-size: 14px;
+    margin: 0;
+    color: white;
+}
+
+.events_upcoming {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 8px;
+
+    flex-flow: row wrap;
+}
+
+.events_spacer {
+    width: 745px;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.events_date_wrapper {
+    width: 745px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 10px;
+}
+
+/*Настройки прямоугольника с датой*/
+.events_date {
+    margin-left: auto;
+    margin-right: auto;
+    width: 715px;
+    height: 36px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0px 15px;
+
+    background-color: var(--splash-window);
+}
+
+.events_date p {
+    font-family: var(--text-medium-lcg);
+    font-size: 14px;
+    margin: 0;
+    color: white;
+}

@@ -1,0 +1,36 @@
+/*Это для "Результаты"*/
+.results_header {
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 745px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    justify-content: flex-start;
+}
+
+.results_header p {
+    font-family: var(--text-medium-lcg);
+    font-size: 14px;
+    margin: 0;
+    color: white;
+
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+/*Настройки для отступов между результатами по дням*/
+.results {
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 745px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 20px;
+}

@@ -1,0 +1,182 @@
+.item {
+    display: contents;
+}
+
+.item:nth-child(5n)::after {
+    content: '';
+    width: 100%;
+}
+
+.tba_participant {
+    height: 120px;
+    width: 120px;
+
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--base-09);
+    border-radius: 30px;
+}
+
+.await_participant {
+    height: 120px;
+    width: 120px;
+
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/public/img/team_status/Await.svg');
+}
+
+.accepted_participant {
+    height: 120px;
+    width: 120px;
+
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/public/img/team_status/Accepted.svg');
+}
+
+.kicked_participant {
+    height: 120px;
+    width: 120px;
+
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/public/img/team_status/Kicked.svg');
+}
+
+.kicked_participant .participant_wrapper {
+    opacity: 0.4;
+}
+
+.kicked_participant .participant_wrapper p {
+    opacity: 1;
+}
+
+.participant_wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 5px;
+
+    cursor: pointer;
+}
+
+.participant_wrapper p {
+    font-size: 14px;
+    font-family: var(--text-regular-lcg);
+    color: white;
+    margin: 0;
+}
+
+.tba_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 5px;
+}
+
+.tba_wrapper p {
+    font-size: 14px;
+    font-family: var(--text-regular-lcg);
+    color: white;
+    margin: 0;
+}
+
+.participant_team {
+    /* height: 60px;
+    width: 60px; */
+    height: 85px;
+    width: 85px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.participant_team img {
+    width: 100%;
+    height: 100%;
+    user-select: none;
+}
+
+
+.crop_participant_player img {
+    width: 81px;
+    height: 128px;
+}
+
+.participant_player {
+    width: 70px;
+    height: 85px;
+    overflow: hidden;
+    object-position: center;
+    position: relative;
+}
+
+.participant_player img {
+    user-select: none;
+    margin: -4px 0px 0px -5px;
+}
+
+/*Махинации с лого*/
+.participant_player_logo {
+    position: absolute;
+    top: 0%;
+    left: -3%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 74px;
+    width: 74px;
+}
+
+.participant_player_logo img {
+    opacity: 0.7;
+    width: 100%;
+    height: 100%;
+
+    user-select: none;
+}
+
+.img_hover_wrapper_participant {
+    height: 120px;
+    width: 120px;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.await_hover {
+    height: 70px;
+    width: 70px;
+
+    position: absolute;
+}

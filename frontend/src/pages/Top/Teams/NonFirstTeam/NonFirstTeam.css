@@ -1,0 +1,43 @@
+/*Это прямоугольник шириной в 50px*/
+.rectangle_50px_top {
+    width: 715px;
+    height: 50px;
+    background: var(--plashka);
+
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    justify-content: space-between;
+    cursor: pointer;
+    user-select: none;
+}
+
+.top_teams .rectangle_50px_top_text {
+    font-family: var(--text-medium-lcg);
+}
+
+.top_teams .rectangle_50px_top_text p {
+    color: var(--base-08);
+    font-size: 20px;
+    margin: 0;
+}
+
+.top_teams .rectangle_50px_top_nick {
+    font-family: var(--text-regular-lcg);
+}
+
+.top_teams .rectangle_50px_top_nick p {
+    color: var(--base-08);
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+}
+
+.rectangle_50px_top img {
+    height: 30px;
+}
+
+.rectangle_50px_top:hover {
+    background: var(--splash-window);
+}

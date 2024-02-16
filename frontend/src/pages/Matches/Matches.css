@@ -1,0 +1,280 @@
+/*Надписи Текщуие и Грядущие турниры*/
+.matches_header {
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 745px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+
+    padding-top: 25px;
+    padding-bottom: 10px;
+}
+
+.matches_header p {
+    font-family: var(--text-medium-lcg);
+    font-size: 14px;
+    margin: 0;
+    color: white;
+}
+
+/*Настройки для отступов между результатами по дням*/
+.matches {
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 745px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 20px;
+}
+
+/*Прямоугольник с матчем*/
+.match_frame {
+    width: 715px;
+    height: 36px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 15px;
+
+    background-color: var(--base-09);
+
+    cursor: pointer;
+}
+
+.match_frame p {
+    font-family: var(--text-regular-lcg);
+    font-size: 14px;
+    margin: 0;
+    color: white;
+}
+
+.match_frame_img_wrapper {
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.match_frame img {
+    user-select: none;
+    height: 30px;
+}
+
+.match_frame:hover {
+    background-color: var(--white70);
+}
+
+.status_match_wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+}
+
+/*Плашка live*/
+.live {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+
+    width: 46px;
+    height: 18px;
+
+    background: var(--base-12);
+    border: 1px solid var(--base);
+    border-radius: 100px;
+}
+
+/*Плашка для времени матча*/
+.ongoing {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+
+    width: 46px;
+    height: 18px;
+
+    background: var(--base-13);
+    border: 1px solid var(--base);
+    border-radius: 100px;
+}
+
+/*Отступ между командами и счётом*/
+.matches_frame {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 22px;
+}
+
+/*Настройки счета матча*/
+.match_score {
+    width: 53px;
+    height: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+}
+
+/*Верхний счёт*/
+.upper_score {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 4px;
+}
+
+/*Счёт для левой команды*/
+.left_upper_score {
+    width: 20px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 0px;
+}
+
+/*Счёт для правой команды*/
+.right_upper_score {
+    width: 20px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0px;
+}
+
+.sub_score {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 7px;
+}
+
+.sub_score p {
+    font-family: var(--text-regular-lcg);
+    font-size: 10px;
+    margin: 0;
+    color: var(--white40);
+}
+
+/*Нижний счёт для левой команды*/
+.left_sub_score {
+    width: 14px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 0px;
+}
+
+/*Нижний счёт для прости команды*/
+.right_sub_score {
+    width: 14px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0px;
+}
+
+/*Настройки отображения турнира*/
+.event {
+    width: 180px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 5px;
+}
+
+.event p {
+    font-family: var(--text-regular-lcg);
+    font-size: 14px;
+    margin: 0;
+    color: white;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/*Настройка звездочек(важности/интереса)*/
+.match_tier {
+    width: 67px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 3px;
+}
+
+.match_tier img {
+    height: 10px;
+    user-select: none;
+}
+
+/*Расстояние между названием команды и лого*/
+.team_space {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 3px;
+}
+
+.match_list_team_wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    gap: 6px;
+}
+
+.match_list_wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    gap: 15px;
+}
+
+.buttons_wrapper {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+}

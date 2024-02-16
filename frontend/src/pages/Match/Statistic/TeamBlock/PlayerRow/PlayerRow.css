@@ -1,0 +1,52 @@
+.statistic_player_row {
+    width: 648px;
+    height: 32px;
+    background: var(--base-09);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.statistic_player_row_nick {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 4px;
+    height: 16px;
+    padding-left: 5px;
+}
+
+.statistic_player_row_nick p {
+    font-family: var(--text-regular-lcg);
+    color: white;
+    margin-bottom: 0px;
+    font-size: 13px;
+}
+
+.player_row_flag {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    width: 17px;
+    height: 13px;
+}
+
+.text {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: row;
+    height: 16px;
+}
+
+.text p{
+    color: white;
+    font-family: var(--text-regular-lcg);
+    font-size: 13px;
+    margin-bottom: 0;
+}

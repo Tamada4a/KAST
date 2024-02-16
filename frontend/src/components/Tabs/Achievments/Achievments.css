@@ -1,0 +1,50 @@
+/*Махинации с расстоянием названий столбцов на странице достижений*/
+.tabcontent_tournaments .achievements_col {
+    width: fit-content;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-left: 45px;
+    padding-bottom: 5px;
+    gap: 78px;
+}
+
+.tabcontent_tournaments .achievements_col p {
+    font-family: var(--text-regular-lcg);
+    font-size: 12px;
+    margin: 0;
+    color: white;
+}
+
+/*Корректируем расстояние между местом и инфой о турике*/
+.place_event_wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0px;
+    gap: 50px;
+}
+
+/*Настройки отображения данных о турике*/
+.ev_info {
+    width: 300px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    gap: 5px;
+
+    cursor: pointer;
+}
+
+.ev_info img {
+    user-select: none;
+    width: 100%;
+    height: 100%;
+}

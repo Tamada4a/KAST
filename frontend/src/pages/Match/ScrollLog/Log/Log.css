@@ -1,0 +1,24 @@
+.log {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    gap: 5px;
+    height: 16px;
+    background: rgba(20, 20, 20, 0.7);
+    border-radius: 100px;
+}
+
+.log p {
+    font-family: var(--text-regular-lcg);
+    margin: 0;
+    font-size: 13px;
+    display: flex;
+}
+
+.event_text {
+    font-family: var(--text-medium-lcg);
+    margin: 0;
+    font-size: 13px;
+}

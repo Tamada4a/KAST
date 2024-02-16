@@ -1,0 +1,228 @@
+/*Кнопка с серым фоном, при наведении темнеет. Текст белый(логин, регистрация)*/
+.full_grey_button {
+    padding: 0px;
+    margin: 0 auto;
+}
+
+.full_grey_button input {
+    color: white;
+    background-color: var(--base-07);
+    width: 200px;
+    height: 40px;
+    outline: none;
+    font-family: var(--text-regular-lcg);
+    border: 1px solid var(--base-07);
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.full_grey_button input:hover {
+    transition: background-color 0.3s 0s ease-in-out;
+    background-color: var(--base-15);
+}
+
+/*Кнопка с серым фоном, при наведении темнеет. Текст белый(логин, регистрация)*/
+.full_grey_button_gap15 {
+    padding-top: 15px;
+    margin: 0 auto;
+    width: 200px;
+}
+
+.full_grey_button_gap15 input {
+    color: white;
+    background-color: var(--base-07);
+    width: 200px;
+    height: 40px;
+    outline: none;
+    font-family: var(--text-regular-lcg);
+    border: 1px solid var(--base-07);
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+.full_grey_button_gap15 input:hover {
+    transition: background-color 0.3s 0s ease-in-out;
+    background-color: var(--base-15);
+}
+
+/*Кнопка с прозрычным фоном и темной обводкой, при наведении светлеет. 
+Текст темный(регистрация в окне логина)*/
+.transparent_grey_border_button {
+    box-sizing: border-box;
+    width: 200px;
+    height: 40px;
+
+    border: 2px solid rgba(77, 77, 77, 0.5);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.transparent_grey_border_button input {
+    color: #7C7C7C;
+    font-family: var(--text-regular-lcg);
+    font-size: 14px;
+    width: 200px;
+    height: 40px;
+    outline: none;
+    background-color: var(--window);
+    box-shadow: 0px 0px 0px transparent;
+    border: 0px solid transparent;
+
+    cursor: pointer;
+}
+
+.transparent_grey_border_button:hover {
+    transition: background-color 0.3s 0s ease-in-out;
+    background-color: var(--plashka);
+}
+
+/*Кнопка, ведущая на матч*/
+.button_match {
+    padding: 5px 12px;
+    gap: 10px;
+
+    height: 16px;
+
+    background: var(--plashka);
+    border: 1px solid var(--splash-window);
+    border-radius: 100px;
+
+    margin: 0;
+
+    cursor: pointer;
+    user-select: none;
+}
+
+.button_match:hover {
+    border-color: var(--base-05);
+}
+
+/*Кнопка с серым фоном, при наведении темнеет. Текст белый(логин, регистрация)*/
+.small_grey_button {
+    padding: 0px;
+    margin: 0;
+    width: 60px;
+}
+
+.small_grey_button input {
+    width: 60px;
+    height: 40px;
+    outline: none;
+
+    font-size: 16px;
+    font-family: var(--text-regular-lcg);
+    color: white;
+
+    border: 1px solid var(--base-07);
+    background-color: var(--base-07);
+
+    cursor: pointer;
+}
+
+.small_grey_button input:hover {
+    transition: background-color 0.3s 0s ease-in-out;
+    background-color: var(--base-15);
+}
+
+.small_dark_button {
+    padding: 0px;
+    margin: 0;
+    width: 60px;
+}
+
+.small_dark_button input {
+    width: 60px;
+    height: 40px;
+    outline: none;
+
+    font-size: 16px;
+    font-family: var(--text-regular-lcg);
+    color: white;
+
+    border: 1px solid var(--base-09);
+    background-color: var(--base-09);
+
+    cursor: pointer;
+}
+
+.small_dark_button input:hover {
+    transition: background-color 0.3s 0s ease-in-out;
+    background-color: var(--plashka);
+}
+
+.dark_button {
+    padding: 0px;
+    margin: 0;
+    width: 200px;
+}
+
+.dark_button input {
+    width: 200px;
+    height: 40px;
+    outline: none;
+
+    font-size: 14px;
+    font-family: var(--text-regular-lcg);
+    color: white;
+
+    border: 1px solid var(--base-09);
+    background-color: var(--base-09);
+
+    cursor: pointer;
+}
+
+.dark_button input:hover {
+    transition: background-color 0.3s 0s ease-in-out;
+    background-color: var(--plashka);
+}
+
+.join_tournament_button {
+    padding: 7px 10px;
+    gap: 10px;
+    color: var(--base-05);
+    width: 223px;
+    height: 19px;
+    cursor: pointer;
+    border: 1px solid var(--base-05);
+    margin: 0 auto;
+    margin-top: 30px;
+    transition: color 0.3s 0s linear;
+}
+
+.join_tournament_button p {
+    font-family: var(--text-medium-lcg);
+    font-size: 16px;
+
+}
+
+.join_tournament_button:hover {
+    transition: color 0.3s 0s ease-in-out;
+    color: #008d50;
+}
+
+.leave_tournament_button {
+    padding: 7px 10px;
+    gap: 10px;
+    color: var(--base-12);
+    width: 223px;
+    height: 19px;
+    cursor: pointer;
+    border: 1px solid var(--base-12);
+    margin: 0 auto;
+    margin-top: 25px;
+    transition: color 0.3s 0s linear;
+}
+
+.leave_tournament_button p {
+    font-family: var(--text-medium-lcg);
+    font-size: 16px;
+
+}
+
+.leave_tournament_button:hover {
+    transition: color 0.3s 0s ease-in-out;
+    color: #cb0f0f;
+}

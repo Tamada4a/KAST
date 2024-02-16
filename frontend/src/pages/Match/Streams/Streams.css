@@ -1,0 +1,53 @@
+.stream {
+    width: 100% - 15px;
+    height: 32px;
+    background-color: var(--base-09);
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 5px 0px 10px;
+    cursor: pointer;
+}
+
+.stream:hover {
+    background-color: var(--splash-window);
+}
+
+.stream_wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0px;
+    gap: 3px;
+    width: 260px;
+}
+
+.stream_wrapper p {
+    font-size: 12px;
+    font-family: var(--text-regular-lcg);
+    color: white;
+    margin: 0;
+}
+
+.stream_viewers {
+    display: flex;
+    margin-right: 5px;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50px;
+}
+
+.stream_viewers p {
+    font-size: 12px;
+    font-family: var(--text-regular-lcg);
+    color: white;
+    margin: 0;
+}
+
+.stream_viewers a {
+    width: 10px;
+    height: 10px;
+    margin-left: 5px;
+    background-image: url("/public/img/twitch_link.svg");
+}

@@ -1,0 +1,31 @@
+.about-us-card {
+    display: flex;
+    height: 237px;
+    padding: 10px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    background: var(--plashka);
+}
+
+.about-us-name {
+    font-family: var(--text-medium-lcg);
+    font-size: 14px;
+    color: white;
+}
+
+.about-us-info {
+    text-align: center;
+    font-family: var(--text-regular-lcg);
+    font-size: 12px;
+    color: var(--white50);
+}
+
+.about-us-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+}

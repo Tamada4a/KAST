@@ -1,0 +1,51 @@
+.tab_matches {
+    margin-left: auto;
+    margin-right: auto;
+
+    height: auto;
+    width: 715px;
+    padding: 0px 15px 15px;
+
+    background-color: var(--plashka);
+}
+
+.tab_matches p {
+    font-family: var(--text-regular-lcg);
+    font-size: 14px;
+    margin: 0;
+    color: white;
+}
+
+.time_header {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+/*Для расположения надписей "дата" и "матч" на странице "Матчи"*/
+.match_col {
+    width: fit-content;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-left: 15px;
+    padding-bottom: 5px;
+    gap: 301px;
+}
+
+.match_col p {
+    font-family: var(--text-regular-lcg);
+    font-size: 12px;
+    margin: 0;
+    color: white;
+}
+
+/*Расстояние между турнирами в 20px*/
+.tournaments {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}

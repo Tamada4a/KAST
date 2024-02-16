@@ -1,0 +1,31 @@
+.about-us-main {
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    padding: 60px 90px 20px 90px;
+    margin: 60px auto 0px auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    background: linear-gradient(180deg, var(--splash-window) 0%, #1A1A1A 38.54%, var(--plashka) 100%);
+}
+
+.about-us-cards-wrapper {
+    gap: 66px;
+}
+
+.about-us-label {
+    font-family: var(--text-medium-lcg);
+    font-size: 16px;
+    color: white;
+}
+
+.about-us-faq {
+    display: flex;
+    width: 974px;
+    padding: 10px 10px 10px 0px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}

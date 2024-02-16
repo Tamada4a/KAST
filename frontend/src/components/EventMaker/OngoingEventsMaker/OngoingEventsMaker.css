@@ -1,0 +1,115 @@
+.events_block {
+    display: contents;
+}
+
+.events_block:nth-child(3n)::after {
+    content: '';
+    width: 100%;
+}
+
+/*Отображние картинки турика*/
+.event_img_header {
+    width: 243px;
+    height: 40px;
+    overflow: hidden;
+    object-position: center;
+}
+
+.event_img_header img {
+    margin: -2px 0px 0px -27px;
+}
+
+/*Предварительно кропаю фотку, чтоб поместилось больше*/
+.crop_event img {
+    width: 285px;
+    height: 69px;
+}
+
+.event_desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+
+    width: 223px;
+    height: fit-content;
+
+    background: var(--base-09);
+}
+
+.event_desc p {
+    margin: 0;
+    font-family: var(--text-regular-lcg);
+    font-size: 14px;
+    margin: 0;
+    color: white;
+
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.info_loc_wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 10px;
+    gap: 5px;
+}
+
+.event_sub_info {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 5px;
+}
+
+.event_sub_info p {
+    font-family: var(--text-regular-lcg);
+    font-size: 12px;
+    width: fit-content;
+}
+
+.dev_line {
+    position: relative;
+    width: 223px;
+    height: 0px;
+
+    border: 1px solid var(--base-08);
+}
+
+.main_event_info {
+    width: 220px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px 0px;
+    gap: 5px;
+}
+
+.main_event_info_wrapper {
+    width: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    gap: 3px;
+}
+
+.main_event_info_wrapper p {
+    max-width: fit-content;
+    font-family: var(--text-regular-lcg);
+    font-size: 12px;
+    color: white;
+}
+
+.main_sub_info p {
+    color: var(--white40);
+}

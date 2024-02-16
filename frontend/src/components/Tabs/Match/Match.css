@@ -1,0 +1,154 @@
+/*Прямоугольник-заголовок матча*/
+.match_header {
+    width: 685px;
+    height: 36px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0px 15px;
+
+    gap: 3px;
+
+    background-color: var(--splash-window);
+
+    cursor: pointer;
+}
+
+/*Сама плашка с матчами*/
+.match_rect {
+    width: 685px;
+    height: 36px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 15px;
+
+    background-color: var(--base-09);
+}
+
+.match_rect p {
+    font-family: var(--text-regular-lcg);
+    font-size: 14px;
+    margin: 0;
+    color: white;
+}
+
+.match_rect img {
+    height: 30px;
+    user-select: none;
+}
+
+.match_rect:hover {
+    background-color: var(--white70);
+}
+
+/*Корректируем положение даты матча*/
+.match_date_wrapper {
+    width: 100px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+
+    padding: 0px;
+}
+
+/*Настройки для отображения команд, лого и счёта(центр плашки матча)*/
+.match {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+}
+
+/*Отступ 10px, центрирование в столбец*/
+.matches_space {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    position: relative;
+    width: auto;
+    height: auto;
+}
+
+/*Расстояние между названием команды и лого*/
+.match_team {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 3px;
+
+    cursor: pointer;
+}
+
+/*Настройки для отображения счёта левой команды*/
+.left_team_score {
+    width: 30px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+
+    padding: 0px;
+}
+
+/*Настройки для отображения счёта правой команды*/
+.right_team_score {
+    width: 30px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+
+    padding: 0px;
+}
+
+/*Настройки для отображения названия левой команды*/
+.left_team_tag {
+    width: 78px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+
+    padding: 0px;
+}
+
+/*Настройки для отображения названия правой команды*/
+.right_team_tag {
+    width: 78px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+
+    padding: 0px;
+}
+
+/*Корректируем положение кнопки на матч*/
+.match_button_wrapper {
+    width: 100px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+
+    padding: 0px;
+}

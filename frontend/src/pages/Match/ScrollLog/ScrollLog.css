@@ -1,0 +1,41 @@
+.scroll_logs {
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: hsl(0, 75%, 5%);
+  width: 648px;
+  height: 356px;
+  background-size: cover;
+}
+
+.scroll_logs::-webkit-scrollbar {
+  width: 8px;
+  /* ширина scrollbar */
+}
+
+.scroll_logs::-webkit-scrollbar-track {
+  background: var(--splash-window);
+  /* цвет дорожки */
+}
+
+.scroll_logs::-webkit-scrollbar-thumb {
+  background-color: var(--base-09);
+  /* цвет плашки */
+  border-radius: 20px;
+  /* закругления плашки */
+  /*border: 3px solid orange;   padding вокруг плашки */
+}
+
+.scroll_logs::-webkit-scrollbar-corner {
+  background: var(--splash-window);
+}
+
+.logs_container {
+  /* position: relative; */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 600px;
+  height: 316px;
+  padding: 10px 0px 0px 8px;
+  gap: 3px;
+}

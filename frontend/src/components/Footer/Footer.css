@@ -1,0 +1,43 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 108px;
+  padding: 20px 0 24px 0;
+  border-top: 3px solid var(--base-03);
+  background-color: #0f0f0f;
+}
+
+.footer-text {
+  font-family: var(--text-font);
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+  font-style: normal;
+  color: var(--text-02);
+}
+
+.copyright {
+  margin-right: 32px;
+}
+
+.contact {
+  margin-left: 32px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.contact-address a {
+  text-decoration: none;
+  color: var(--text-02);
+}
+
+.contact-address:hover {
+  transition: color 0.3s 0s ease-in-out;
+  color: white;
+}
+
+.contact-address:hover a {
+  transition: color 0.3s 0s ease-in-out;
+  color: var(--base-05);
+}

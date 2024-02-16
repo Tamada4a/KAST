@@ -1,0 +1,124 @@
+/*Положение хедера нашего окна*/
+.header_splash_window {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Позиция логотипа*/
+.logo_splash_window {
+    display: flex;
+
+    height: 64px;
+    width: 73px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    /* padding-bottom: 25px; */
+    background-image: url('/public/kast.svg');
+    background-size: cover;
+}
+
+/*Крестик на закрытие*/
+.close {
+    display: inline-block;
+
+    color: black;
+    padding: 0 12px;
+    margin: 10px;
+    text-decoration: none;
+    font-family: var(--text-regular-lcg);
+    font-size: 14pt;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: white;
+}
+
+/*Стартовые настройки окошка*/
+.splash_window {
+    align-items: center;
+    gap: 10px;
+    width: 525px;
+    height: fit-content;
+    text-align: center;
+    padding: 12px 0px 35px;
+    color: #0000cc;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background: var(--splash-window);
+    z-index: 1;
+    transform: scale(0.5);
+    transition: 0.4s;
+}
+
+.splash_window.active {
+    transform: scale(1);
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+}
+
+
+.info_text {
+    width: 470px;
+    padding: 0px 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 14px;
+    margin: 0 auto;
+}
+
+.info_text p {
+    font-family: var(--text-regular-lcg);
+    font-size: 16px;
+    color: white;
+}
+
+.inside {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 10px;
+
+    position: relative;
+    width: auto;
+    height: fit-content;
+    max-height: 300px;
+}
+
+.inside::-webkit-scrollbar {
+    width: 8px;
+    /* ширина scrollbar */
+}
+
+.inside::-webkit-scrollbar-track {
+    background: #242424;
+    /* цвет дорожки */
+}
+
+.inside::-webkit-scrollbar-thumb {
+    background-color: #191919;
+    /* цвет плашки */
+    border-radius: 20px;
+    /* закругления плашки */
+    /*border: 3px solid orange;   padding вокруг плашки */
+}
+
+.inside::-webkit-scrollbar-corner {
+    background: #242424;
+}
+
+.scroll {
+    overflow-y: auto;
+    overflow-x: hidden;
+}

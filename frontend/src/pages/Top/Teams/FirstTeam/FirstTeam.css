@@ -1,0 +1,30 @@
+/*Прямоугольник для отображения игроков топ-1 команды*/
+.top1_team_rectangle {
+    width: 715px;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 11px 15px 15px;
+    gap: 15px;
+
+    background: var(--base-09);
+}
+
+.top1_team_rectangle a {
+    font-family: var(--text-medium-lcg);
+    font-size: 16px;
+    margin: 0;
+    text-decoration: none;
+    color: var(--base-08);
+    cursor: pointer;
+    user-select: none;
+    transition: fill 0.3s 0s ease-in-out;
+}
+
+.top1_team_rectangle a:hover {
+    color: white;
+    transition: color 0.3s 0s ease-in-out;
+}

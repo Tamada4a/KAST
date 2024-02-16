@@ -1,0 +1,12 @@
+.team_block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 6px;
+
+    width: 630px;
+    /* min-height: 180px; */
+    max-height: 254px;
+    height: fit-content;
+}

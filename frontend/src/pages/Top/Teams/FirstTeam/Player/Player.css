@@ -1,0 +1,55 @@
+/*Тут всё, связанное с отображением фоток игроков и, может, ников*/
+
+/*Предварительно кропаю фотку, чтоб поместилось больше*/
+.crop img {
+    width: 207px;
+    height: 330px;
+}
+
+.player_top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 5px;
+    user-select: none;
+}
+
+.top_teams .player_top p {
+    font-family: var(--text-regular-lcg);
+    font-size: 16px;
+    margin: 0;
+    color: var(--base-08);
+    pointer-events: none;
+}
+
+/*Отображние фотки с заливкой на фоне*/
+.players_background {
+    width: 127px;
+    height: 158px;
+    overflow: hidden;
+    background-color: var(--base-10);
+    object-position: center;
+}
+
+.players_background img {
+    margin: -10px 0px 0px -40px;
+}
+
+/*Предварительно кропаю фотку, чтоб поместилось больше*/
+.crop_team img {
+    width: 145px;
+    height: 230px;
+}
+
+.players_team {
+    width: 127px;
+    height: 158px;
+    overflow: hidden;
+    object-position: center;
+}
+
+.players_team img {
+    margin: -5px 0px 0px -10px;
+}

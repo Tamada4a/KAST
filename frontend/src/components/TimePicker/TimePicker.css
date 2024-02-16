@@ -1,0 +1,68 @@
+.select_time {
+    width: 75px;
+    height: 100px;
+    background: var(--plashka);
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: var(--text-regular-lcg);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    overflow-y: auto;
+}
+
+.select_time::-webkit-scrollbar {
+    width: 8px;
+}
+
+.select_time::-webkit-scrollbar-track {
+    background: #242424;
+}
+
+.select_time::-webkit-scrollbar-thumb {
+    background-color: #191919;
+    border-radius: 20px;
+}
+
+.select_time::-webkit-scrollbar-corner {
+    background: #242424;
+}
+
+.select_time_options {
+    width: 75px;
+    list-style: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    color: white;
+    padding: 0 23px 0 15px;
+    gap: 6px;
+}
+
+.select_time_options p {
+    margin: 0;
+    font-family: var(--text-regular-lcg);
+    font-size: 14px;
+    color: white;
+}
+
+.select_time_options:hover {
+    background-color: #3c3c3c;
+}
+
+.time_selected {
+    background-color: #3c3c3c;
+    pointer-events: none;
+    user-select: none;
+}
+
+.display_inline {
+    width: fit-content;
+    display: flex;
+    margin: 0 auto;
+}

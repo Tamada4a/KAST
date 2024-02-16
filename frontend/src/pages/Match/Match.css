@@ -1,0 +1,292 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.container p {
+    font-family: var(--text-medium-lcg);
+    font-size: 14px;
+    line-height: 120%;
+    color: white;
+    margin: 0;
+}
+
+.match_info_upcoming {
+    margin: 0 auto;
+    margin-top: 60px;
+    width: 939px;
+    background-color: var(--base);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.match_info_upcoming_stream {
+    display: flex;
+    margin-right: 0;
+    width: 330px;
+    height: 32px;
+    background-color: #242424;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.match_info_upcoming_stream p {
+    color: white;
+    font-family: var(--text-medium-lcg);
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 120%;
+    margin-left: 5px;
+
+}
+
+
+#map_1 .map_img {
+    /* background-image: url("img/maps/desc/overpass.jpg"); */
+    height: 30px;
+    width: 330px;
+}
+
+#map_2 {
+    opacity: 1;
+}
+
+#map_2 .map_img {
+    /* background-image: url("img/maps/desc/anubis.svg"); */
+    height: 30px;
+    width: 330px;
+}
+
+#map_3 {
+    opacity: 0.3;
+}
+
+#map_3 .map_img {
+    /* background-image: url("img/maps/desc/nuke.svg"); */
+    height: 30px;
+    width: 330px;
+}
+
+/*то что находится в мини карте*/
+/*лого первой команды*/
+.map .logo_first_team {
+    width: 25px;
+    height: 25px;
+    background-size: cover;
+}
+
+.map .logo_second_team {
+    width: 25px;
+    height: 25px;
+    background-size: cover;
+}
+
+.pick {
+    width: 24px;
+    height: 10px;
+
+    display: flex;
+    padding: 0px 3px;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 30px;
+    background: #414141;
+}
+
+.pick p {
+    font-family: var(--text-regular-lcg);
+    font-size: 9px;
+    margin: 0;
+    color: white;
+    height: 8px;
+}
+
+#first_team_first_match {
+    opacity: 0.4;
+}
+
+.scoreboard_block {
+    width: 648px;
+    max-height: 615px;
+    height: fit-content;
+    background-color: var(--base);
+    margin: 0 auto;
+
+    overflow: hidden;
+}
+
+.scoreboard_block p,
+.scroll_logs_block p,
+.match_statistic_block p {
+    font-family: var(--text-medium-lcg);
+    font-size: 14px;
+    margin: 0;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.scroll_logs_block {
+    width: 651px;
+    height: 378px;
+    margin: 0 auto;
+}
+
+.match_statistic_block {
+    margin: 0 auto;
+    background-color: var(--base);
+    width: 648px;
+
+    min-height: 135px;
+    height: fit-content;
+}
+
+.ip_match {
+    padding: 9px 5px 8px 10px;
+    width: 315px;
+    height: 15px;
+    background: var(--base-09);
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.ip_match p {
+    color: rgba(255, 255, 255, 0.25);
+    font-family: var(--text-regular-lcg);
+    font-size: 12px;
+    margin: 0;
+}
+
+.eye_img_wrapper {
+    width: 20px;
+    height: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.eye {
+    cursor: pointer;
+    width: 20px;
+    height: 14px;
+}
+
+.eye_active {
+    filter: var(--base-05-filter);
+}
+
+.ip_block_images {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 25px;
+
+
+    width: 110px;
+    height: 14px;
+
+}
+
+.minus {
+    width: 14px;
+    border-radius: 10px;
+    border: 2px solid #4C4C4C;
+    cursor: pointer;
+}
+
+.minus:hover {
+    transition: filter 0.3s 0s ease-in-out;
+    filter: invert(66%) sepia(95%) saturate(557%) hue-rotate(94deg) brightness(143%) contrast(101%);
+}
+
+.add_stream {
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 5px;
+    cursor: pointer;
+
+    user-select: none;
+}
+
+.add_stream p {
+    font-size: 16px;
+    font-family: var(--text-regular-lcg);
+    color: var(--text-02);
+    pointer-events: none;
+}
+
+.add_stream:hover p {
+    transition: color 0.3s 0s ease-in-out;
+    color: white;
+}
+
+.add_stream:hover img {
+    transition: filter 0.3s 0s ease-in-out;
+    filter: invert(66%) sepia(95%) saturate(557%) hue-rotate(94deg) brightness(143%) contrast(101%);
+}
+
+.p_fixer {
+    font-family: var(--text-medium-lcg);
+    font-size: 14px;
+    line-height: 120%;
+    color: white;
+    margin: 0;
+}
+
+.match_roster_rect {
+    width: 638px;
+    height: auto;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 8px 5px;
+    gap: 22px;
+
+    background: var(--base-09);
+}
+
+.match_roster_player {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 3px;
+    user-select: none;
+}
+
+.match_roster_player p {
+    font-size: 13px;
+    color: white;
+    font-family: var(--text-regular-lcg);
+    margin: 0;
+}
+
+.match_player_roster_back {
+    width: 110px;
+    height: 137px;
+    overflow: hidden;
+    background-color: var(--base-10);
+    object-position: center;
+}
+
+.match_player_roster_back img {
+    margin: -5px 0px 0px -35px;
+}
+
+.match_player_roster_crop img {
+    width: 180px;
+    height: 287px;
+}

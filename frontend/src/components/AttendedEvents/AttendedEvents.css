@@ -1,0 +1,160 @@
+/*Расстояние 10px между каждой плашкой с туриком со страницы teamEvents*/
+.events {
+    margin-left: auto;
+    margin-right: auto;
+    width: 745px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 10px;
+}
+
+/*Стартовые настройки для названий столбцов*/
+.events_col {
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 730px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 15px;
+    padding-bottom: 5px;
+}
+
+.events_col p {
+    font-family: var(--text-regular-lcg);
+    font-size: 14px;
+    margin: 0;
+    color: white;
+}
+
+/*Настройки для каждого столбца отдельно - двигаю*/
+.events_col_date {
+    padding-left: 9px;
+}
+
+.events_col_event {
+    padding-left: 95px;
+}
+
+.events_col_team {
+    padding-left: 338px;
+}
+
+/*Прямоугольник с турниром*/
+.event_rect {
+    height: 53px;
+    width: 715px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0px 15px;
+
+    background-color: var(--base-09);
+
+    cursor: pointer;
+}
+
+.event_rect:hover {
+    background-color: var(--white70);
+}
+
+/*По факту нужен, чтоб располагать всё от начала строки*/
+.event_wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/*Он задаёт расстояние между элементами*/
+.event_info_wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*Настройки для отображения занятого места*/
+.event_place {
+    width: 61px;
+    height: auto;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.event_place p {
+    font-family: var(--text-regular-lcg);
+    font-size: 14px;
+    margin: 0;
+    color: white;
+}
+
+/*Настройки отображения данных о турике*/
+.event_information {
+    width: 300px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    gap: 5px;
+
+    cursor: pointer;
+}
+
+.event_information img {
+    user-select: none;
+    width: 100%;
+    height: 100%;
+}
+
+/*Отодвигаем команду от границы прямоугольника*/
+.event_team_space_border {
+    padding-right: 70px;
+    width: 113px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/*Настройки для отображения лого и названия команды*/
+.event_team {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 5px;
+
+    cursor: pointer;
+}
+
+.event_team img {
+    height: 35px;
+    user-select: none;
+}
+
+.event_team p {
+    max-width: 146px;
+    width: fit-content;
+
+    font-family: var(--text-regular-lcg);
+    font-size: 14px;
+    margin: 0;
+    color: white;
+}

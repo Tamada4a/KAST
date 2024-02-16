@@ -1,0 +1,29 @@
+version: "3.7"
+services:
+  frontend:
+    image: "kast/frontend"
+    container_name: "frontend"
+    build:
+        context: ./frontend
+        dockerfile: Dockerfile
+    environment:
+      - HTTPS=true
+    ports:
+      - 3000:3000
+  db:
+    image: "mongo:6.0.5"
+    container_name: "db"
+    restart: always
+    ports:
+      - 27017:27017
+  backend:
+    image: "kast/backend"
+    container_name: "backend"
+    build:
+        context: ./backend
+        dockerfile: Dockerfile
+    restart: always
+    ports:
+      - 8080:8080
+    depends_on:
+      - db

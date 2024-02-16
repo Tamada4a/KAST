@@ -1,0 +1,157 @@
+/*Отступ 20px, центрирование в столбец*/
+.col_center_gap_20 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    position: relative;
+    width: 500px;
+    height: auto;
+    margin: 0 auto;
+}
+
+/*Отступ 10px, центрирование в столбец*/
+.col_center_gap10 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    position: relative;
+    width: auto;
+    height: auto;
+}
+
+/*Отступ 6px, центрирование в строку*/
+.row_center_6 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 6px;
+
+    width: auto;
+    height: auto;
+
+    flex: none;
+    flex-grow: 0;
+}
+
+/*Отступ 7px, центрирование в строку*/
+.row_center_7 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 7px;
+
+    width: auto;
+    height: auto;
+
+    flex: none;
+    flex-grow: 0;
+}
+
+/*Отступ 5px, центрирование в строку*/
+.row_center_5px {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 5px;
+
+    width: auto;
+    height: auto;
+
+    flex: none;
+    flex-grow: 0;
+}
+
+/*Отступ 30px, центрирование в столбец*/
+.col_center_gap30 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+}
+
+/*Отступ 20px, центрирование в столбец*/
+.col_right_gap20 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 0px;
+
+    position: relative;
+    width: auto;
+    height: auto;
+}
+
+/*Отступ 25px, центрирование в столбец*/
+.col_right_gap25 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 25px;
+}
+
+/*Отступ 3px, центрирование в строку*/
+.row_center_gap3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 3px;
+
+    width: auto;
+    height: auto;
+
+    flex: none;
+    flex-grow: 0;
+}
+
+/*Отступ 20px, расположение в строку от начала*/
+.row_left_gap20 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 20px;
+}
+
+/*Отступ 3px, расположение в столбец от начала*/
+.col_right_gap3 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    margin: 0;
+    gap: 3px;
+}
+
+.col_center_gap5 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.display-on-start {
+    align-items: flex-start;
+    width: 464px;
+}
+
+.display-row-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}

@@ -1,0 +1,112 @@
+/*Сама плашка с турнирами*/
+.event_rect_match {
+    width: 715px;
+    height: 40px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 15px;
+
+    background-color: var(--base-09);
+}
+
+.event_rect_match p {
+    font-family: var(--text-regular-lcg);
+    font-size: 12px;
+    margin: 0;
+
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.event_rect_match:hover {
+    background-color: var(--white70);
+}
+
+.event_rect_match img {
+    height: 30px;
+}
+
+.past_event_info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 5px;
+}
+
+.sub_up_info_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+}
+
+.event_name p {
+    width: 220px;
+
+    font-size: 14px;
+    color: white;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sub_past_info {
+    width: 260px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 5px;
+}
+
+.sub_past_info p {
+    font-size: 12px;
+    color: var(--white40);
+    width: fit-content;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sub_past_info img {
+    height: 10px;
+}
+
+.event_spec {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px 0px;
+    gap: 10px;
+}
+
+.main_info_wrapper {
+    width: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    gap: 3px;
+}
+
+.main_info_wrapper p {
+    max-width: fit-content;
+    font-family: var(--text-regular-lcg);
+    font-size: 12px;
+    color: white;
+}
+
+.main_sub_info_wrapper p {
+    color: var(--white40);
+}

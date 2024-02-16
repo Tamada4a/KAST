@@ -1,0 +1,134 @@
+.map_upcoming {
+    width: 330px;
+    height: 30px;
+    margin-bottom: 5px;
+}
+
+.map {
+    display: flex;
+    width: 330px;
+    height: 77px;
+    margin-bottom: 10px;
+    flex-direction: column;
+}
+
+.map_points .score {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: white;
+    opacity: 0.7;
+
+    align-content: flex-end;
+    font-family: var(--text-regular-lcg);
+    font-size: 12px;
+}
+
+.map_points .score p {
+    margin: 0;
+    color: white;
+    font-family: var(--text-regular-lcg);
+    font-size: 12px;
+}
+
+.map .logo_team {
+    width: 25px;
+    height: 25px;
+}
+
+
+.map .name_first_team {
+    width: 79px;
+    height: 17px;
+}
+
+.map .name_first_team p {
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--base-14);
+}
+
+.map .name_second_team p {
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--base-14);
+}
+
+.map .name_second_team {
+    width: 79px;
+    height: 17px;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.map .score_first_team {
+    width: 79px;
+    height: 19px;
+}
+
+.map .score_first_team p {
+    color: red;
+    margin: 0;
+}
+
+.map .score_second_team {
+    width: 79px;
+    height: 19px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.map .score_second_team p {
+    color: green;
+    margin: 0;
+}
+
+.map_points {
+    background-color: var(--base-09);
+    height: 47px;
+    width: 320px;
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+}
+
+.map_points .team {
+    gap: 4px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.map_score {
+    opacity: 0.7;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3px;
+}
+
+.map_score p {
+    margin: 0;
+    color: var(--base-14);
+    font-family: var(--text-regular-lcg);
+    font-size: 12px;
+}
+
+.map_score .ct_score_color p {
+    color: var(--ct-color);
+}
+
+.map_score .t_score_color p {
+    color: var(--t-color);
+}

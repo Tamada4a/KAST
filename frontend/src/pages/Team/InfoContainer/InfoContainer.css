@@ -1,0 +1,105 @@
+/*Блок для краткой инфы о команде(название, локация и пр)*/
+.info_container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 15px 10px;
+    gap: 25px;
+
+    width: fit-content;
+    height: auto;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    background: var(--plashka);
+}
+
+/*Настройки для отображения лого и локации с названием*/
+.team_info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+}
+
+.team_info img {
+    height: 40px;
+    user-select: none;
+}
+
+.team_logo {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.team_logo input {
+    visibility: hidden;
+    width: 0;
+    height: 0
+}
+
+.hovered {
+    cursor: pointer;
+}
+
+/*Настройки для отображения локации и названия*/
+.info_teamname {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+    margin: 0;
+    gap: 3px;
+}
+
+.info_teamname p {
+    font-family: var(--text-regular-lcg);
+    font-size: 16px;
+    margin: 0;
+    color: white;
+}
+
+/*Настройки для отображения локации и флага*/
+.flag_location {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 3px;
+    justify-content: center;
+}
+
+.flag_location p {
+    font-family: var(--text-regular-lcg);
+    font-size: 14px;
+    margin: 0;
+    color: white;
+}
+
+.flag_location img {
+    height: 12px;
+    user-select: none;
+}
+
+/*Настройки для отображения позиции в топе*/
+.top_position {
+    width: 715px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top_position p {
+    font-family: var(--text-regular-lcg);
+    font-size: 16px;
+    margin: 0;
+    color: white;
+}

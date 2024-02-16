@@ -1,0 +1,8 @@
+.round_history_line_sideCT {
+    display: flex;
+    /* justify-content: space-between; */
+    border: solid rgba(255, 255, 255, 0.3);
+    border-width: 0 0 1px;
+    height: 14px;
+    padding: 1%;
+}

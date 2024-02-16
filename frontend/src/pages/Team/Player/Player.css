@@ -1,0 +1,85 @@
+/*Предварительно кропаю фотку, чтоб поместилось больше*/
+.crop_team img {
+    width: 145px;
+    height: 230px;
+}
+
+/*Махинации с фоткой, чтоб довести до нужного вида*/
+.players_team {
+    width: 127px;
+    height: 158px;
+    overflow: hidden;
+    object-position: center;
+    position: relative;
+}
+
+.players_team img {
+    margin: -5px 0px 0px -10px;
+}
+
+/*Всё связанное с ником*/
+.nick_team {
+    position: absolute;
+    top: 87.5%;
+    /*90%, если убирать height*/
+    left: 0%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 3px;
+    justify-content: center;
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(90deg, transparent 10%, rgba(0, 0, 0, .5) 20%, rgba(0, 0, 0, .5) 50%, rgba(0, 0, 0, .5) 80%, transparent 90%);
+}
+
+.nick_team p {
+    font-family: var(--text-regular-lcg);
+    font-size: 16px;
+    margin: 0;
+    color: white;
+    pointer-events: none;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /*вроде отключил ховер*/
+}
+
+.nick_team img {
+    height: 12px;
+}
+
+/*С помощью неё мы регулируем положение ника и фотки*/
+.player_card_wrapper {
+    width: 156px;
+    height: 194px;
+    position: relative;
+    user-select: none;
+}
+
+.team_player_card_wrapper {
+    width: 127px;
+    height: 158px;
+    position: relative;
+    user-select: none;
+}
+
+.img_hover_wrapper_in_team {
+    width: 127px;
+    height: 158px;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+}
+
+.kick_hover {
+    width: 127px;
+    height: 158px;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: 0;
+}

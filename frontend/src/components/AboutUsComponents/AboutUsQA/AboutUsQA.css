@@ -1,0 +1,19 @@
+.qa-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+}
+
+.qa-text {
+    font-size: 14px;
+    color: white;
+}
+
+.qa-answer {
+    font-family: var(--text-medium-lcg);
+}
+
+.qa-question {
+    font-family: GraphikLCGLightItalic;
+}

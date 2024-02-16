@@ -1,0 +1,113 @@
+.player_row {
+    width: 620px;
+    height: 16px;
+    padding: 5px 5px 4px 5px;
+    background: rgba(28, 188, 255, 0.4);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.player_row_nick {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 15px;
+}
+
+.player_row_nick p {
+    font-family: var(--text-medium-lcg);
+    color: white;
+    opacity: 1;
+    font-size: 13px;
+    margin: 0px;
+    /* margin-top: 1px; */
+}
+
+.defuse_kit {
+    height: 14px;
+    /* left: 250px; */
+}
+
+.weapon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+
+    width: 67px;
+    height: 12px;
+}
+
+.armor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 15px;
+    height: 16px;
+}
+
+.HP_block {
+    position: relative;
+    width: 40px;
+    height: 12px;
+    /* left: 337px; */
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 100px;
+
+    overflow: hidden;
+}
+
+.HP {
+    position: absolute;
+    width: 16px;
+    height: 12px;
+    border-radius: 100px;
+    background: var(--base-05);
+}
+
+.HP_block p {
+    position: relative;
+    color: black;
+    font-family: var(--text-medium-lcg);
+    margin: 0;
+    font-size: 10px;
+    z-index: 1;
+    margin-left: 3px;
+    margin-top: 1px;
+}
+
+.player_stats_col {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+
+    width: 23px;
+    height: 16px;
+}
+
+.player_avg {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    width: 48px;
+    height: 16px;
+    /* left: 80px; */
+}
+
+.player_stats_col p,
+.player_avg p {
+    font-family: var(--text-regular-lcg);
+    color: white;
+    margin: 0;
+}

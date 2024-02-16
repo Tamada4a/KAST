@@ -1,0 +1,139 @@
+.roster {
+    margin: 0 auto;
+    height: auto;
+    width: 715px;
+    background-color: var(--plashka);
+    padding: 25px 15px 15px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.teams_stats {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.stat_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 35px;
+
+    border: 1px solid #242424;
+    border-radius: 100px;
+}
+
+.stat_box_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 5px;
+}
+
+.stat_box_wrapper p {
+    font-family: var(--text-medium-lcg);
+    font-size: 16px;
+    margin: 0;
+    color: white;
+}
+
+.stat_box_wrapper .stat_down p {
+    font-family: var(--text-regular-lcg);
+    font-size: 13px;
+}
+
+.rect_team {
+    width: 685px;
+    height: 36px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 15px;
+
+    background-color: var(--base-09);
+}
+
+.rect_team p {
+    margin: 0;
+    color: white;
+    font-size: 14px;
+    font-family: var(--text-regular-lcg);
+}
+
+.rect_team img {
+    height: 30px;
+    user-select: none;
+}
+
+.rect_team:hover {
+    background: var(--white70);
+}
+
+.teams_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 10px;
+}
+
+.period_wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 250px;
+}
+
+.team_wrapper {
+    width: 146px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 4px;
+
+    cursor: pointer;
+}
+
+.col_names {
+    margin: 0 auto;
+
+    width: 700px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 15px;
+}
+
+.col_names p {
+    font-family: var(--text-regular-lcg);
+    font-size: 12px;
+    margin: 0;
+    color: white;
+}
+
+/*Настройки для каждого столбца отдельно - двигаю*/
+.col_names_team {
+    padding-left: 238px;
+}
+
+.col_names_trophies {
+    padding-left: 197px;
+}
+
+.teams_history {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}

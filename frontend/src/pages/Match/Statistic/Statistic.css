@@ -1,0 +1,84 @@
+.statistic {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+
+    width: 648px;
+
+    min-height: 116px;
+    height: fit-content;
+}
+
+.statistic_maps {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 5px;
+    gap: 10px;
+
+    width: 638px;
+    height: 16px;
+
+    background: #242424;
+}
+
+.statistic_maps button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    font-family: var(--text-medium-lcg);
+    font-size: 14px;
+    margin: 0;
+}
+
+.tab {
+    color: var(--white25);
+}
+
+.active_tab {
+    color: white;
+    transition: color 0.3s 0s ease-in-out;
+}
+
+.teams_block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+
+
+    width: auto;
+    height: auto;
+}
+
+.statictic_content {
+    display: none;
+
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+}
+
+.active_statictic_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+
+
+    width: auto;
+
+    min-height: 74px;
+    height: auto;
+}

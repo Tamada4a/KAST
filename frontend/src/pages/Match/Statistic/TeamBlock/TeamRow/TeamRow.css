@@ -1,0 +1,39 @@
+.statistic_team_row {
+    width: 631px;
+    height: 27px;
+    background: #242424;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding: 2px 12px 3px 5px;
+}
+
+.statistic_team_row p {
+    color: white;
+    font-family: var(--text-medium-lcg);
+    font-size: 14px;
+    margin: 0;
+}
+
+.statistic_team_row_name {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 4px;
+
+    height: 23px;
+}
+
+.statistic_team_row_name p {
+    margin-top: 2px;
+}
+
+.statistic_team_row_stats {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}

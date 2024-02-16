@@ -1,0 +1,29 @@
+.window_error {
+    width: 800px;
+    height: 400px;
+    background-color: var(--plashka);
+    margin: 0 auto;
+    margin-top: 100px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 50px;
+}
+
+.window_error_text{
+    position: absolute;
+    margin: 0px 175px 205px 0px;
+    text-align: center;
+    font-family: var(--text-medium-lcg);
+    font-size: 20px;
+    color: black;
+}
+
+.window_error_text p {
+    margin: 0;
+    text-align: center;
+    font-family: var(--text-medium-lcg);
+    font-size: 20px;
+    color: black;
+}

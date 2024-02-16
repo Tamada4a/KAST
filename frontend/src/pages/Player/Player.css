@@ -1,0 +1,288 @@
+.user_back {
+    width: 715px;
+    height: auto;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 15px 0px;
+
+    background: var(--base-09);
+}
+
+/*Предварительно кропаю фотку, чтоб поместилось больше*/
+.crop_player img {
+    width: 177px;
+    height: 280px;
+}
+
+/*Махинации с фоткой, чтоб довести до нужного вида*/
+.player {
+    width: 156px;
+    height: 194px;
+    overflow: hidden;
+    object-position: center;
+    position: relative;
+}
+
+.player img {
+    margin: -5px 0px 0px -13px;
+}
+
+/*Махинации с лого*/
+.player_team_logo {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 156px;
+    width: 156px;
+}
+
+.player_team_logo img {
+    opacity: 0.7;
+    width: 100%;
+    height: 100%;
+}
+
+.player_info {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 35px;
+    gap: 15px;
+}
+
+.player_nick {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 5px;
+}
+
+.player_nick p {
+    font-size: 18px;
+    font-family: var(--text-medium-lcg);
+    color: white;
+    margin: 0;
+}
+
+/*Отображение Название-инфа со строкой снизу*/
+.devider_info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.devider_info_line {
+    height: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.devider_info_line p {
+    font-size: 12px;
+    font-family: var(--text-regular-lcg);
+    color: white;
+    margin: 0;
+}
+
+.devider_info_line span {
+    font-size: 12px;
+    font-family: var(--text-medium-lcg);
+    color: white;
+    margin: 0;
+}
+
+.devider_subline {
+    width: 100%;
+    border: 1px solid var(--base-08);
+}
+
+.devider_team {
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 4px
+}
+
+.devider_team_logo {
+    width: 25px;
+    height: 25px;
+}
+
+.devider_team img {
+    width: 100%;
+    height: 100%;
+    user-select: none;
+}
+
+
+.social_media {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0px;
+    gap: 5px;
+}
+
+.social_media img {
+    height: 13px;
+    user-select: none;
+}
+
+.social_media a {
+    height: 13px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+}
+
+/*Так как у нас через <img> задаётся всё, то цвет меняется через filter*/
+/*Тут регулируем цвет для неактивного элемента*/
+.inactive_colored {
+    filter: invert(29%) sepia(19%) saturate(0%) hue-rotate(254deg) brightness(75%) contrast(96%);
+}
+
+.inactive_elem {
+    filter: invert(29%) sepia(19%) saturate(0%) hue-rotate(254deg) brightness(50%) contrast(99%);
+}
+
+/*Тут регулируем цвет для активного элемента*/
+.active_colored {
+    cursor: pointer;
+}
+
+.active_colored:hover {
+    filter: var(--base-05-filter-2);
+}
+
+.active_elem {
+    cursor: pointer;
+}
+
+.active_elem:hover {
+    filter: var(--base-05-filter);
+}
+
+.colored_to_white {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(550%) contrast(103%);
+}
+
+/*Для редактирования соц. сетей*/
+.social_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 2px;
+}
+
+.social_wrapper p {
+    font-size: 12px;
+    font-family: var(--text-regular-lcg);
+    color: var(--white50);
+    margin: 0;
+}
+
+.social_logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 44px;
+    height: 24px;
+    user-select: none;
+}
+
+.social_logo img {
+    height: 20px;
+}
+
+.logo_social_wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.social_row {
+    width: 470px;
+    margin: 0;
+    padding: 0px 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social_row span {
+    font-size: 16px;
+    font-family: var(--text-medium-lcg);
+    color: white;
+    margin: 0;
+}
+
+.unbind {
+    cursor: pointer;
+}
+
+.unbind:hover {
+    color: var(--white40);
+}
+
+.social_devider {
+    position: relative;
+    margin: 5px auto 12px;
+    width: 470px;
+    height: 0px;
+
+    border: 1px solid #4F4F4F;
+}
+
+.small_buttons_wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    gap: 100px;
+}
+
+.img_hover_wrapper {
+    width: 156px;
+    height: 194px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+.img_hover_wrapper img {
+    width: 156px;
+    cursor: pointer;
+}

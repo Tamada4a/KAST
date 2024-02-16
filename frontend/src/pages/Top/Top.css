@@ -1,0 +1,20 @@
+/*Топ команд*/
+.top_teams {
+    width: 745px;
+    margin-left: auto;
+    margin-right: auto;
+    height: fit-content;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 25px;
+    gap: 25px;
+}
+
+.top_teams p {
+    color: white;
+    font-size: 24px;
+    margin: 0;
+    font-family: var(--text-medium-lcg);
+}

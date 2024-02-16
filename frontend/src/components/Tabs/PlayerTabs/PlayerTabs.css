@@ -1,0 +1,47 @@
+.playerTab {
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    height: 41px;
+    width: 685px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 30px;
+    text-decoration: none;
+    background-color: var(--base-09);
+
+    list-style-type: none;
+
+    margin-bottom: 0;
+}
+
+.tab_link {
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    text-decoration: none;
+
+    font-family: var(--text-regular-lcg);
+    font-size: 16px;
+    margin: 0;
+    color: var(--white25);
+}
+
+.tab_link a {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: rgb(74, 77, 74);
+    font-size: 16px;
+}
+
+.tab_link a:hover {
+    color: white;
+    transition: color 0.3s 0s ease-in-out;
+}

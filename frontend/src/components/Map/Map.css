@@ -1,0 +1,28 @@
+.map_wrapper {
+    position: relative;
+
+    margin: 0;
+
+    width: 280px;
+    height: 30px;
+    overflow: hidden;
+    object-position: center;
+}
+
+.map_wrapper img {
+    margin: 0px 0px 0px -25px;
+}
+
+.map_name_wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.map_name_wrapper p {
+    font-size: 14px;
+    font-family: var(--text-regular-lcg);
+    color: white;
+    margin: 0;
+}

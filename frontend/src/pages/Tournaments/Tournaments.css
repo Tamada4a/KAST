@@ -1,0 +1,48 @@
+.tab_wrapper {
+    margin: 0 auto;
+
+    overflow: hidden;
+    height: auto;
+    width: 715px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    padding: 25px 0px 0px;
+
+    gap: 150px;
+
+    list-style-type: none;
+    text-decoration: none;
+}
+
+/*Стилизация кнопок(вкладок по сути)*/
+.tab_button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    font-family: var(--text-regular-lcg);
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    color: var(--white25);
+}
+
+.tab_button a {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-02);
+    font-size: 16px;
+}
+
+.tab_button a:hover {
+    color: white;
+    transition: color 0.3s 0s ease-in-out;
+}

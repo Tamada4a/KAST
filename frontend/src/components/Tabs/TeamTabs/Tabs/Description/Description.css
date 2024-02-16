@@ -1,0 +1,16 @@
+/*Стилизация содержимого вкладки с описанием*/
+.tabcontent_info {
+    height: auto;
+    width: 715px;
+    padding: 15px 15px;
+    margin: 0 auto;
+
+    background-color: var(--plashka);
+}
+
+.tabcontent_info p {
+    font-family: var(--text-regular-lcg);
+    font-size: 14px;
+    margin: 0;
+    color: white;
+}

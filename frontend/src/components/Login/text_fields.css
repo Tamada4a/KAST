@@ -1,0 +1,680 @@
+/*Половинчатые тектовые поля(регистрация, например)*/
+.text-field_half {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-field_half input {
+    position: relative;
+
+    width: 197px;
+    height: 30px;
+    font-family: var(--text-regular-lcg);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 10px 15px 10px 15px;
+    background-color: var(--plashka);
+    background-clip: padding-box;
+    color: white;
+    border: 1px solid var(--plashka);
+    outline: none;
+    margin: 0 auto;
+    display: block;
+}
+
+.text-field_half input[type=text] {
+    width: 182px;
+    padding-right: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.text-field_half input::placeholder {
+    color: #ffffff 70%;
+    opacity: 0.3;
+    font-family: var(--text-regular-lcg);
+}
+
+.text-field_half_img_wrapper img {
+    position: absolute;
+    width: 12px;
+    transition: transform 0.5s;
+    margin: -28px 0px 0px 86px;
+
+    cursor: pointer;
+}
+
+/*Половинчатое поле-селектор(регистрация)*/
+.text-field_half_selector {
+    width: 229px;
+    height: 52px;
+    /* padding: 10px 15px 10px 15px; */
+}
+
+.text_field_half_select {
+    width: 197px;
+    height: 30px;
+    font-family: var(--text-regular-lcg);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--white70);
+    user-select: none;
+    padding: 10px 15px 10px 15px;
+    background-color: var(--plashka);
+    border: 1px solid var(--plashka);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.text_field_half_select p {
+    color: #ffffff 70%;
+    opacity: 1;
+    font-family: var(--text-regular-lcg);
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.text_field_half_select img {
+    width: 12px;
+    transition: transform 0.5s;
+}
+
+.onStart {
+    color: white 70%;
+    opacity: 1;
+    font-family: var(--text-regular-lcg);
+}
+
+.choosed {
+    color: white;
+    opacity: 1;
+    font-family: var(--text-regular-lcg);
+}
+
+.select_list {
+    width: 227px;
+    height: auto;
+    max-height: 196px;
+    background: var(--plashka);
+    overflow: hidden;
+    padding: 0;
+    font-family: var(--text-regular-lcg);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    overflow-y: auto;
+}
+
+.select_list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.select_list::-webkit-scrollbar-track {
+    background: #242424;
+}
+
+.select_list::-webkit-scrollbar-thumb {
+    background-color: #191919;
+    border-radius: 20px;
+}
+
+.select_list::-webkit-scrollbar-corner {
+    background: #242424;
+}
+
+.text_field_half_options {
+    width: 227px;
+    list-style: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    color: white;
+    gap: 6px;
+    padding: 0 15px 0 15px;
+}
+
+.text_field_half_options img {
+    width: 20px;
+}
+
+.text_field_half_options:hover {
+    background-color: #3c3c3c;
+}
+
+.text_field_half_options p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+.rotate {
+    transform: rotate(180deg);
+    filter: var(--base-05-filter-2);
+}
+
+.non_selectable {
+    pointer-events: none;
+    background-color: #121212;
+}
+
+.non_selectable p {
+    opacity: 0.15;
+}
+
+.non_selectable img {
+    opacity: 0.15;
+}
+
+.list_logo {
+    width: 20px;
+    height: 20px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.list_logo img {
+    user-select: none;
+}
+
+/*Длинные текстовые поля(логин)*/
+.text-field input {
+    margin: 0 auto;
+    display: block;
+    width: 432px;
+    height: 30px;
+    padding: 10px 15px 10px 15px;
+    font-family: var(--text-regular-lcg);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: #141414;
+    background-clip: padding-box;
+    color: white;
+    border: 1px solid #141414;
+    outline: none;
+}
+
+.text-field input::placeholder {
+    color: #ffffff 70%;
+    opacity: 0.3;
+    font-family: var(--text-regular-lcg);
+}
+
+.description_field textarea {
+    width: 440px;
+    height: 90px;
+    background-color: var(--plashka);
+    padding: 15px;
+
+    display: flex;
+    align-items: flex-start;
+
+    overflow-y: auto;
+
+    margin: 0;
+    font-family: var(--text-regular-lcg);
+    font-size: 14px;
+    color: var(--white50);
+    outline: none;
+    border: none;
+
+    resize: none;
+}
+
+.description_field textarea::placeholder {
+    color: white 70%;
+    opacity: 0.4;
+    font-family: var(--text-regular-lcg);
+}
+
+.description_field textarea::-webkit-scrollbar {
+    width: 8px;
+}
+
+.description_field textarea::-webkit-scrollbar-track {
+    background: #242424;
+
+}
+
+.description_field textarea::-webkit-scrollbar-thumb {
+    background-color: #191919;
+    border-radius: 20px;
+}
+
+.description_field textarea::-webkit-scrollbar-corner {
+    background: #242424;
+}
+
+.text-field_selector {
+    width: 464px;
+    height: 52px;
+}
+
+.text-field_selector input {
+    position: relative;
+
+    width: 432px;
+    height: 30px;
+    font-family: var(--text-regular-lcg);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 10px 15px 10px 15px;
+    background-color: var(--plashka);
+    background-clip: padding-box;
+    color: white;
+    border: 1px solid var(--plashka);
+    outline: none;
+    margin: 0 auto;
+    display: block;
+}
+
+.text-field_selector input::placeholder {
+    color: #ffffff 70%;
+    opacity: 0.3;
+    font-family: var(--text-regular-lcg);
+}
+
+.text-field_img_wrapper img {
+    position: absolute;
+    width: 12px;
+    transition: transform 0.5s;
+    margin: -28px 0px 0px 196px;
+
+    cursor: pointer;
+}
+
+.text_field_select {
+    width: 432px;
+    height: 30px;
+    padding: 10px 15px 10px 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    user-select: none;
+
+    background-color: var(--plashka);
+    border: 1px solid var(--plashka);
+
+    cursor: pointer;
+
+    font-family: var(--text-regular-lcg);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--white70);
+
+    margin: 0;
+}
+
+.text_field_select p {
+    color: #ffffff 70%;
+    opacity: 1;
+    font-family: var(--text-regular-lcg);
+}
+
+.text_field_select img {
+    width: 12px;
+    transition: transform 0.5s;
+}
+
+.select_list_full {
+    width: 432px;
+    height: auto;
+    max-height: 196px;
+    background: var(--plashka);
+    overflow: hidden;
+    padding: 0;
+    font-family: var(--text-regular-lcg);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    overflow-y: auto;
+}
+
+.select_list_full::-webkit-scrollbar {
+    width: 8px;
+}
+
+.select_list_full::-webkit-scrollbar-track {
+    background: #242424;
+}
+
+.select_list_full::-webkit-scrollbar-thumb {
+    background-color: #191919;
+    border-radius: 20px;
+}
+
+.select_list_full::-webkit-scrollbar-corner {
+    background: #242424;
+}
+
+.text_field_options {
+    width: 432px;
+    list-style: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    color: white;
+    gap: 6px;
+    padding: 0 15px 0 15px;
+}
+
+.text_field_options img {
+    width: 20px;
+}
+
+.text_field_options:hover {
+    background-color: #3c3c3c;
+}
+
+.select_date {
+    width: 464px;
+    height: fit-content;
+    overflow: hidden;
+    padding: 0;
+    font-family: var(--text-regular-lcg);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.date_options {
+    width: 464px;
+    list-style: none;
+    box-sizing: border-box;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+
+    gap: 6px;
+    padding: 0 10px 0 10px;
+}
+
+.match_select_list {
+    width: 282px;
+    height: auto;
+    max-height: 196px;
+    background: var(--plashka);
+    overflow: hidden;
+    padding: 0;
+    font-family: var(--text-regular-lcg);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    overflow-y: auto;
+}
+
+.match_select_list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.match_select_list::-webkit-scrollbar-track {
+    background: #242424;
+}
+
+.match_select_list::-webkit-scrollbar-thumb {
+    background-color: #191919;
+    border-radius: 20px;
+}
+
+.match_select_list::-webkit-scrollbar-corner {
+    background: #242424;
+}
+
+.select_match_options {
+    width: 282px;
+    list-style: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    color: white;
+    padding: 0 15px 0 15px;
+    gap: 6px;
+}
+
+.select_match_options img {
+    width: 20px;
+}
+
+.select_match_options:hover {
+    background-color: #3c3c3c;
+}
+
+.match_selector {
+    width: 284px;
+    height: 52px;
+}
+
+.match_select {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.match_select input {
+    width: 284px;
+    height: 30px;
+    font-family: var(--text-regular-lcg);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 10px 15px 10px 15px;
+    background-color: var(--plashka);
+    background-clip: padding-box;
+    color: white;
+    border: 1px solid var(--plashka);
+    outline: none;
+    margin: 0 auto;
+    display: block;
+}
+
+.match_select input[type=text] {
+    width: 269px;
+    padding-right: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.match_select input::placeholder {
+    color: #ffffff 70%;
+    opacity: 0.3;
+    font-family: var(--text-regular-lcg);
+}
+
+.match_select img {
+    position: absolute;
+    width: 12px;
+    transition: transform 0.5s;
+    margin: 2px 0px 0px 240px;
+
+    cursor: pointer;
+}
+
+.time_list {
+    width: fit-content;
+    height: fit-content;
+    overflow: hidden;
+    padding: 0;
+}
+
+/*Половинчатые тектовые поля(регистрация, например)*/
+.text-field_third {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-field_third input {
+    width: 118px;
+    height: 30px;
+    font-family: var(--text-regular-lcg);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 10px 15px 10px 15px;
+    background-color: var(--plashka);
+    background-clip: padding-box;
+    color: white;
+    border: 1px solid var(--plashka);
+    outline: none;
+    margin: 0 auto;
+    display: block;
+}
+
+.text-field_third input[type=text] {
+    width: 103px;
+    padding-right: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.text-field_third input::placeholder {
+    color: #ffffff 70%;
+    opacity: 0.3;
+    font-family: var(--text-regular-lcg);
+}
+
+/*Половинчатое поле-селектор(регистрация)*/
+.text-field_third_selector {
+    width: 150px;
+    height: 52px;
+    /* padding: 10px 15px 10px 15px; */
+}
+
+.text_field_third_select {
+    width: 118px;
+    height: 30px;
+    font-family: var(--text-regular-lcg);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--white70);
+    user-select: none;
+    padding: 10px 15px 10px 15px;
+    background-color: var(--plashka);
+    border: 1px solid var(--plashka);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.text_field_third_select p {
+    color: #ffffff 70%;
+    opacity: 1;
+    font-family: var(--text-regular-lcg);
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.text_field_third_select img {
+    width: 12px;
+    transition: transform 0.5s;
+}
+
+.select_list_third {
+    width: 150px;
+    height: auto;
+    max-height: 196px;
+    background: var(--plashka);
+    overflow: hidden;
+    padding: 0;
+    font-family: var(--text-regular-lcg);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    overflow-y: auto;
+}
+
+.select_list_third::-webkit-scrollbar {
+    width: 8px;
+}
+
+.select_list_third::-webkit-scrollbar-track {
+    background: #242424;
+}
+
+.select_list_third::-webkit-scrollbar-thumb {
+    background-color: #191919;
+    border-radius: 20px;
+}
+
+.select_list_third::-webkit-scrollbar-corner {
+    background: #242424;
+}
+
+.text_field_third_options {
+    width: 150px;
+    list-style: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    color: white;
+    gap: 6px;
+    padding: 0 15px 0 15px;
+}
+
+.text-field_third_img_wrapper img {
+    position: absolute;
+    width: 12px;
+    transition: transform 0.5s;
+    margin: -28px 0px 0px 51px;
+
+    cursor: pointer;
+}
+
+.text_field_third_options img {
+    width: 20px;
+}
+
+.text_field_third_options:hover {
+    background-color: #3c3c3c;
+}
+
+.text_field_third_options p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

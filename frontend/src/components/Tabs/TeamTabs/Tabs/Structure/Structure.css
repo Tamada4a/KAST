@@ -1,0 +1,69 @@
+.head_header {
+    width: 100%;
+    padding-bottom: 25px;
+}
+
+.players_list {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 20px;
+}
+
+/*Отображние фотки с заливкой на фоне*/
+.players_background_roster {
+    width: 91px;
+    height: 113px;
+    overflow: hidden;
+    background-color: var(--base-10);
+    object-position: center;
+}
+
+.players_background_roster img {
+    margin: -7px 0px 0px -30px;
+}
+
+/*Предварительно кропаю фотку, чтоб поместилось больше*/
+.crop_roster img {
+    width: 150px;
+    height: 237px;
+}
+
+.nick_roster p {
+    font-family: var(--text-regular-lcg);
+    font-size: 14px;
+    margin: 0;
+    color: var(--white25);
+    pointer-events: none;
+    /*вроде отключил ховер*/
+}
+
+.ex_header {
+    width: 100%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.ex_players_list {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 20px;
+    opacity: 0.3;
+
+    flex-flow: row wrap;
+}
+
+
+.ex_players {
+    display: contents;
+}
+
+.ex_players:nth-child(6n)::after {
+    content: '';
+    width: 100%;
+}

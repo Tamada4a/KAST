@@ -1,0 +1,61 @@
+:root {
+
+  --text-font: 'Arial Black', sans-serif;
+  --text-regular-lcg: 'GraphikLCGRegular';
+  --text-medium-lcg: 'GraphikLCGMedium';
+  --text-semibold-lcg: 'GraphikLCGSemibold';
+  --font-h1: normal 900 44px/48px var(--text-font);
+  --font-h2: normal 900 44px/48px var(--text-font);
+  --font-h4: normal 700 24px/28px var(--text-font);
+  --font-text: normal 400 15px/24px var(--text-font);
+  --font-text-m: normal 800 24px/32px var(--font-text);
+  --font-text-s: normal 400 15px/24px var(--text-font);
+  --font-text-xs: normal 400 13px/20px var(--text-font);
+  --radius-l: 24px;
+  --radius-m: 16px;
+  --radius-s: 8px;
+  --radius-xs: 4px;
+  --text-01: white;
+  --text-02: rgb(74, 77, 74);
+  --text-link: #336fee;
+  --text-link-hover: #6e87e1;
+  --text-error: #e31c1c;
+  --base-01: #15151f;
+
+  --header: #0f0f0f;
+  --plashka: #141414;
+  --splash-window: #242424;
+  --base: #0f0f0f;
+  --white25: #535353;
+  --white40: #757575;
+  --white50: #8C8C8C;
+  --white70: #363636;
+
+  --ct-color: #1cbcff;
+  --t-color: #f44e1c;
+
+  --hp-medium: #FFDC24;
+  --base-04: #1f1f1f;
+  --base-05: #00ff90;
+  --base-06: rgba(0, 0, 0, 0.2);
+  --base-07: #4D4D4D;
+  --base-08: #4F4F4F;
+  --base-09: #191919;
+  --base-10: #7D7D7D;
+  --base-11: #0D890A;
+  --base-12: #FF1E1E;
+  --base-13: #058C02;
+  --base-14: #A2A2A2;
+  --base-15: #3c3c3c;
+
+
+  --primary: #ffdd2d;
+  --primary-hover: #fcc521;
+  --primary-active: #fab619;
+  --primary-focus: #a29610;
+  --error-bg: rgba(224, 31, 25, 0.12);
+  --selection: rgba(112, 182, 246, 0.12);
+
+  --base-05-filter: invert(66%) sepia(95%) saturate(557%) hue-rotate(94deg) brightness(280%) contrast(121%);
+  --base-05-filter-2: invert(66%) sepia(95%) saturate(557%) hue-rotate(94deg) brightness(190%) contrast(101%);
+}

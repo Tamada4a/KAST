@@ -1,0 +1,18 @@
+.text_wrapper p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.player_wrapper_23px_crop img {
+    width: 23px;
+    height: 36px;
+}
+
+.player_wrapper_23px {
+    width: 23px;
+    height: 23px;
+    overflow: hidden;
+    object-position: center;
+    position: relative;
+}

@@ -1,0 +1,89 @@
+.team_row {
+    width: 620px;
+    height: 20px;
+    padding: 2px 5px 3px 5px;
+    background: rgba(28, 188, 255, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.team_row_name {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 4px;
+
+    height: 23px;
+}
+
+.team_row_name p {
+    color: white;
+    font-family: var(--text-medium-lcg);
+    font-size: 13px;
+    margin: 0;
+    margin-top: 2px;
+}
+
+.states {
+    display: flex;
+    flex-direction: row;
+    height: 16px;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+}
+
+.money {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 16px;
+    margin-right: 25px;
+}
+
+.money p {
+    font-family: var(--text-regular-lcg);
+    color: white;
+    margin: 0;
+}
+
+.kda_block {
+    display: flex;
+    gap: 16px;
+    width: fit-content;
+    height: 16px;
+}
+
+.kda {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding: 0px;
+    gap: 15px;
+
+    width: fit-content;
+    height: 16px;
+}
+
+.kda p,
+.avg p {
+    font-family: var(--text-regular-lcg);
+    color: white;
+    margin: 0;
+}
+
+.avg {
+    width: 48px;
+    height: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+}
