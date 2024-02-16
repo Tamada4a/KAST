@@ -1,10 +1,10 @@
-# ![kast](https://github.com/Tamada4a/KAST/assets/99251317/17a7689a-43e7-45a0-8e47-5a74e86f936e) KAST
+# ![KAST logo](https://github.com/Tamada4a/KAST/blob/main/frontend/public/kast.svg) KAST
 
 ## What is KAST?
 KAST is a service for viewing matches, information about tournaments, players and teams. This service was developed as an alternative to HLTV for amateur tournaments.
 A demo of all the main pages can be viewed in <a href="https://github.com/Tamada4a/KAST/blob/main/docs/en/PagesDemo.md ">this</a> file.
 
-![Player Profile](https://github.com/Tamada4a/KAST/assets/99251317/4814eca6-673d-4df3-bc18-25c4f4a743d7)
+![Player Profile](https://github.com/Tamada4a/KAST/blob/main/assets/1.%20Player%20profile.png)
 
 ### Full list of features:
 For all users:<ul>
@@ -83,7 +83,10 @@ For administrators:<ul>
 <i>A: We want to enter the amateur tournament market and raise their level. We want amateur players to touch the level of organization of professional tournaments.</i><br></br>
 
 <b>Q: Why are there so few commits in the repository?</b>  
-<i>A: This repository is a merger of two old ones: backend and frontend, since initially each part of the service was located in its own repository.</i>
+<i>A: This repository is a merger of two old ones: backend and frontend, since initially each part of the service was located in its own repository.</i><br></br>
+
+<b>Q: How do I enable English on the website?</b>  
+<i>A: Currently, only Russian is available.</i>
 
 ## Something wrong...
 If something went wrong, please create an Issue.
