@@ -1,7 +1,7 @@
 # ![KAST logo](https://github.com/Tamada4a/KAST/blob/main/frontend/public/kast.svg) KAST
 
 ## What is KAST?
-KAST is a service for viewing matches, information about tournaments, players and teams. This service was developed as an alternative to HLTV for amateur tournaments.
+KAST is a service for viewing CS2 matches, information about tournaments, players and teams. This service was developed as an alternative to HLTV for amateur tournaments.
 A demo of all the main pages can be viewed in <a href="https://github.com/Tamada4a/KAST/blob/main/docs/en/PagesDemo.md ">this</a> file.
 
 ![Player Profile](https://github.com/Tamada4a/KAST/blob/main/assets/1.%20Player%20profile.png)
