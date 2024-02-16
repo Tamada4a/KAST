@@ -4,62 +4,62 @@
 # Страницы
 ## Страница "Турниры"
 Данная страница делится на две вкладки: "Текущие и будущие турниры" и "Прошедшие турниры".
-![Текущие и будущие турниры](https://github.com/Tamada4a/KAST/assets/99251317/ebe4d9e7-566c-4838-85d7-abec83d960f0)
-![Прошедшие турниры](https://github.com/Tamada4a/KAST/assets/99251317/0fe6a7ad-5f91-4bdc-bf8a-73412a6d0510)
+![Текущие и будущие турниры](https://github.com/Tamada4a/KAST/blob/main/assets/2.%20Ongoing%20and%20upcoming%20events.png)
+![Прошедшие турниры](https://github.com/Tamada4a/KAST/blob/main/assets/3.%20Ended%20events.png)
 В каждой из вкладок отображаются соответствующие турниры. При открытии данной страницы по-умолчанию отображаются текущие и будущие турниры. Будущие турниры распределяются по месяцам начала.<br></br>
 Если пользователь, просматривающий страниц, является администратором, он может:<br></br>
 Создать новый турнир:
-![Создать турнир](https://github.com/Tamada4a/KAST/assets/99251317/afc1d7c0-84c2-40f4-80ad-d25dd5a9aa8c)
+![Создать турнир](https://github.com/Tamada4a/KAST/blob/main/assets/4.%20Create%20new%20event.png)
 <br></br>
 Изменить уже существующий турнир:
-![Изменить тунрир](https://github.com/Tamada4a/KAST/assets/99251317/9bd1e577-7437-467d-a4da-dc1666d50fee)
+![Изменить тунрир](https://github.com/Tamada4a/KAST/blob/main/assets/5.%20Edit%20event.png)
 
 ## Страница "Матчи"
 На данной странице отображаются все текущие и будущие матчи
-![Страница "Матчи"](https://github.com/Tamada4a/KAST/assets/99251317/1a92020d-3c84-4207-87bc-44145049db36)
+![Страница "Матчи"](https://github.com/Tamada4a/KAST/blob/main/assets/6.%20Matches%20page.png)
 Будущие турниры распределяются по дате начала.<br></br>
 Если пользователь, просматривающий страниц, является администратором, он может:<br></br>
 Создать новый матч:
-![Создать матч](https://github.com/Tamada4a/KAST/assets/99251317/6fca4968-c3f6-44e0-afb5-5c2634b3ede5)
+![Создать матч](https://github.com/Tamada4a/KAST/blob/main/assets/7.%20Create%20new%20match.png)
 <br></br>
 Изменить уже существующий матч:
-![Изменить матч](https://github.com/Tamada4a/KAST/assets/99251317/0f63e460-bc5f-4b80-b42d-cad1ae0d3704)
+![Изменить матч](https://github.com/Tamada4a/KAST/blob/main/assets/8.%20Edit%20match.png)
 
 ## Страница "Результаты"
 На данной странице представлены результаты всех завершившихся матчей
-![Страница "Результаты"](https://github.com/Tamada4a/KAST/assets/99251317/7265cea6-7196-4371-8522-87b9f845551d)
+![Страница "Результаты"](https://github.com/Tamada4a/KAST/blob/main/assets/9.%20Results%20page.png)
 
 ## Страница "Топ команд"
 На данной странице представлен топ-5 лучших команд и дата изменения топа. Если в базе данных нет информации о топе, отображается текущая дата.
-![Страница "Топ команд"](https://github.com/Tamada4a/KAST/assets/99251317/5bb415bd-01bf-441f-97f2-cffae15348fb)
+![Страница "Топ команд"](https://github.com/Tamada4a/KAST/blob/main/assets/10.%20Teams%20top%20page.png)
 <br></br>
 Если пользователь является администратором, он может изменять топ:
-![Изменение топа](https://github.com/Tamada4a/KAST/assets/99251317/590b389d-02a5-448d-b84d-6eb24751f340)
+![Изменение топа](https://github.com/Tamada4a/KAST/blob/main/assets/11.%20Edit%20tems%20top.png)
 
 ## Профиль игрока
 На данной странице можно увидеть информацию об игроке: ник, фотографию, его текущую команду, возраст и социальные сети, если они привязаны
-![Профиль игрока](https://github.com/Tamada4a/KAST/assets/99251317/4814eca6-673d-4df3-bc18-25c4f4a743d7)
+![Профиль игрока](https://github.com/Tamada4a/KAST/blob/main/assets/1.%20Player%20profile.png)
 
 <br></br>Также на данной странице в разных вкладках отоюражается соответствующая информация об игроке:<br></br>
 Будущие и прошедшие матчи:
-![Матчи игрока](https://github.com/Tamada4a/KAST/assets/99251317/35fd27b9-81eb-4999-9110-809b6f2329ad)
+![Матчи игрока](https://github.com/Tamada4a/KAST/blob/main/assets/12.%20Player%20matches.png)
 
 Турниры игрока, разделенные на две вкладки: "Ближайшие и текущие" и "Завершенные"
-![Ближайшие и текущие турниры игрока](https://github.com/Tamada4a/KAST/assets/99251317/138e240f-0fcb-4392-991b-117d9d98bcf6)
-![Завершенные турниры игрока](https://github.com/Tamada4a/KAST/assets/99251317/ed3c91c9-e22d-47c6-a658-d407857789a5)
+![Ближайшие и текущие турниры игрока](https://github.com/Tamada4a/KAST/blob/main/assets/13.%20Ongoing%20and%20upcoming%20player%20events.png)
+![Завершенные турниры игрока](https://github.com/Tamada4a/KAST/blob/main/assets/14.%20Ended%20player%20events.png)
 
 Достижения игрока, разделенные на две вкладки: "Lan" и "Online"
-![Lan достижения игрока](https://github.com/Tamada4a/KAST/assets/99251317/d8707f39-0299-4a6e-8a0b-3e8c47d222e4)
+![Lan достижения игрока](https://github.com/Tamada4a/KAST/blob/main/assets/15.%20Player%20lan%20achievements.png)
 
 <br></br>Все команды игрока:
-![Все команды игрока](https://github.com/Tamada4a/KAST/assets/99251317/cc1a4607-21b1-415c-ac09-ad1300d00fb1)
+![Все команды игрока](https://github.com/Tamada4a/KAST/blob/main/assets/16.%20Player%20rosters.png)
 
 ## Страница команды
 На данной странице пользователь может ознакомиться с информацией о соответствующей командой
-![Страница команды](https://github.com/Tamada4a/KAST/assets/99251317/3103b9fc-5e13-4815-b209-75a7877198f4)
+![Страница команды](https://github.com/Tamada4a/KAST/blob/main/assets/17.%20Team%20page.png)
 <br></br>Как и в случае со страницей игрока, здесь присутствуют вкладки "Матчи", "Турниры", "Достижения". Также на странице команды присутствует вкладка "Состав", 
 где можно просмотреть информацию о текущем составе команды и прошлых игроках:
-![Состав команды](https://github.com/Tamada4a/KAST/assets/99251317/7a2068ed-7f1e-4c42-8ec4-21d791a8c059)
+![Состав команды](https://github.com/Tamada4a/KAST/blob/main/assets/18.%20Team%20players.png)
 
 ## Страница матча
 На данной странице отображается информация о матче: 
@@ -74,9 +74,9 @@
 <li>История событий в ходе матча - логи.</li>
 <br></br>
  
-![Верхняя часть матча](https://github.com/Tamada4a/KAST/assets/99251317/08da92d3-e721-4124-8d6c-00d577984213)
+![Верхняя часть матча](https://github.com/Tamada4a/KAST/blob/main/assets/19.%20Match%20page%20upper.png)
 
-![Нижняя часть матча](https://github.com/Tamada4a/KAST/assets/99251317/b3e9db70-1839-4e50-81ab-ab105ba85054)
+![Нижняя часть матча](https://github.com/Tamada4a/KAST/blob/main/assets/20.%20Match%20page%20bottom.png)
 
 ## Страница турнира
 На данной странице отображается информация о турнире:
@@ -93,6 +93,4 @@
 <li>Дополнительная информация о проведении турнира.</li>
 <li>Ссылка на облако с фотографиями.</li>
 
-![Страница турнира](https://github.com/Tamada4a/KAST/assets/99251317/cfbaaf01-6d7b-4a5a-a1a6-c8a0ba71e42d)
-
-![Матчи турнира](https://github.com/Tamada4a/KAST/assets/99251317/85dfc46d-5cfc-4567-856d-829312fd4f2d)
+![Страница турнира](https://github.com/Tamada4a/KAST/blob/main/assets/21.%20Event%20page.png)
