@@ -25,7 +25,7 @@ developer "1"						                                                    // Develo
 mp_teamname_1 “Team tag for team 1”                                         // The tag of the first team. Must match the tag in the database
 mp_teamname_2 “Team tag for team 2”                                         // The tag of the second team. Must match the tag in the database
 ```
-where `<cup-name>` is the name of the tournament with spaces replaced by `-`, and `<matchID>` is the ID of the match for which logs are sent.
+where `<cup-name>` is the name of the tournament with spaces replaced by `-`, `<match ID>` is the ID of the match for which logs are sent, and instead of `http://localhost:8080` you can specify the address where your server is located.
 
 11. Starting the server:
     1. For Windows. Go to the folder where you downloaded the server, open `/game/bin/win64` and enter the following command in the console: `.\cs2.exe -dedicated +map de_dust2`.
