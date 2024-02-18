@@ -57,7 +57,7 @@ For administrators:<ul>
       2. Download the repository.
       3. Go to the `backend` folder and launch the project in any way convenient for you.
       4. Go to the `frontend` folder, open the console in this folder and write `npm install` and then `set HTTPS=true&npm start`.
-3. Open in the browser `https://localhost:3000` or another domain where you run the server.
+3. Open in the browser `https://localhost:3000` or another domain where you run the client.
 4. The project has been launched!
 
 ## Authors
