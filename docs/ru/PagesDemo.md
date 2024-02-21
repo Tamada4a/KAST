@@ -37,6 +37,7 @@
 ![Изменение топа](https://github.com/Tamada4a/KAST/blob/main/assets/11.%20Edit%20tems%20top.png)
 
 ## Профиль игрока
+### Обзор
 На данной странице можно увидеть информацию об игроке: ник, фотографию, его текущую команду, возраст и социальные сети, если они привязаны
 ![Профиль игрока](https://github.com/Tamada4a/KAST/blob/main/assets/1.%20Player%20profile.png)
 
@@ -51,8 +52,11 @@
 Достижения игрока, разделенные на две вкладки: "Lan" и "Online"
 ![Lan достижения игрока](https://github.com/Tamada4a/KAST/blob/main/assets/15.%20Player%20lan%20achievements.png)
 
-<br></br>Все команды игрока:
+Все команды игрока:
 ![Все команды игрока](https://github.com/Tamada4a/KAST/blob/main/assets/16.%20Player%20rosters.png)
+
+### Обновление фотографии игрока
+Для качественного отображения фотографии пользователя, необходимо загружать фотографию в размере 305x484.  <a href="https://github.com/Tamada4a/KAST/blob/main/backend/images/players/NonPhoto.png">Пример</a> фотографии игрока.
 
 ## Страница команды
 На данной странице пользователь может ознакомиться с информацией о соответствующей командой
