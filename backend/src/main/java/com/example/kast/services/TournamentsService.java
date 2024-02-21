@@ -7,8 +7,10 @@ import com.example.kast.exceptions.AppException;
 import com.example.kast.mongo_collections.documents.*;
 import com.example.kast.mongo_collections.embedded.Requests;
 import com.example.kast.mongo_collections.interfaces.*;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
@@ -51,8 +53,11 @@ public record TournamentsService(TournamentRepository tournamentRepository, Coun
      * @param player ник игрока, который просматривает страницу
      * @return Объект класса {@link FullTournamentsDTO}, содержащий информацию, необходимую для взаимодействия со
      * страницей "Турниры" на frontend
+     * @throws JsonProcessingException В случае ошибки при парсинге JSON-строки, представляющей список объектов,
+     *                                 содержащих информацию о будущих или завершенных турнирах, соответствующих
+     *                                 определенной дате
      */
-    public FullTournamentsDTO getFullTournaments(String player) {
+    public FullTournamentsDTO getFullTournaments(String player) throws JsonProcessingException {
         List<TournamentDoc> tournamentDocList = tournamentRepository.findAll();
 
         ArrayList<EndedEventsByDateDTO> endedEvents = getEndedEvents(tournamentDocList);
@@ -245,11 +250,14 @@ public record TournamentsService(TournamentRepository tournamentRepository, Coun
      * @param tournamentDocList список турниров, среди которых проводится поиск завершенных турниров
      * @return Список объектов класса {@link EndedEventsByDateDTO}, содержащих информацию о прошедших турнирах,
      * соответствующих определенной дате
+     * @throws JsonProcessingException В случае ошибки при парсинге JSON-строки, представляющей собой список объектов
+     *                                 класса {@link EndedEventsByDateDTO}, содержащих информацию о прошедших турнирах,
+     *                                 соответствующих определенной дате
      */
-    private ArrayList<EndedEventsByDateDTO> getEndedEvents(List<TournamentDoc> tournamentDocList) {
+    private ArrayList<EndedEventsByDateDTO> getEndedEvents(List<TournamentDoc> tournamentDocList) throws JsonProcessingException {
         Type listType = new TypeToken<ArrayList<EndedEventDTO>>() {
         }.getType();
-        ArrayList<EndedEventDTO> endedEvents = new GsonBuilder().create().fromJson(getEventsByType(tournamentDocList, "ended"), listType);
+        ArrayList<EndedEventDTO> endedEvents = new Gson().fromJson(getEventsByType(tournamentDocList, "ended"), listType);
 
         Collections.reverse(endedEvents);
 
@@ -288,8 +296,11 @@ public record TournamentsService(TournamentRepository tournamentRepository, Coun
      * @param tournamentDocList список турниров, среди которых проводится поиск будущих турниров
      * @return Список объектов класса {@link FeaturedEventsByDateDTO}, содержащих информацию о будущих турнирах,
      * соответствующих определенной дате
+     * @throws JsonProcessingException В случае ошибки при парсинге JSON-строки, представляющей собой список объектов
+     *                                 класса {@link FeaturedEventsByDateDTO}, содержащих информацию о будущих турнирах,
+     *                                 соответствующих определенной дате
      */
-    private ArrayList<FeaturedEventsByDateDTO> getFeaturedEvents(List<TournamentDoc> tournamentDocList) {
+    private ArrayList<FeaturedEventsByDateDTO> getFeaturedEvents(List<TournamentDoc> tournamentDocList) throws JsonProcessingException {
         Type listType = new TypeToken<ArrayList<FeaturedEventDTO>>() {
         }.getType();
         ArrayList<FeaturedEventDTO> featuredEvents = new Gson().fromJson(getEventsByType(tournamentDocList, "upcoming"), listType);
@@ -493,11 +504,16 @@ public record TournamentsService(TournamentRepository tournamentRepository, Coun
      * @param endedEvents список объектов класса {@link EndedEventDTO}, содержащий информацию о завершенных турнирах
      * @return Список объектов класса {@link EndedEventsByDateDTO}, содержащих информацию о прошедших турнирах,
      * соответствующих определенной дате
+     * @throws JsonProcessingException В случае ошибки при парсинге JSON-строки, представляющей собой список объектов
+     *                                 класса {@link EndedEventsByDateDTO}, содержащих информацию о прошедших турнирах,
+     *                                 соответствующих определенной дате
      */
-    private ArrayList<EndedEventsByDateDTO> sortEndedEventsByDate(ArrayList<EndedEventDTO> endedEvents) {
+    private ArrayList<EndedEventsByDateDTO> sortEndedEventsByDate(ArrayList<EndedEventDTO> endedEvents) throws JsonProcessingException {
         Type listType = new TypeToken<ArrayList<EndedEventsByDateDTO>>() {
         }.getType();
-        ArrayList<EndedEventsByDateDTO> sortedEvents = new Gson().fromJson(sortEventsByDateByType(endedEvents, "endedEvents"), listType);
+        Gson gson = new Gson();
+
+        ArrayList<EndedEventsByDateDTO> sortedEvents = gson.fromJson(sortEventsByDateByType(gson.toJson(endedEvents), "endedEvents"), listType);
         Collections.reverse(sortedEvents);
 
         return sortedEvents;
@@ -512,18 +528,23 @@ public record TournamentsService(TournamentRepository tournamentRepository, Coun
      * @param featuredEvents список объектов класса {@link FeaturedEventDTO}, содержащий информацию о будущих турнирах
      * @return Список объектов класса {@link FeaturedEventsByDateDTO}, содержащих информацию о будущих турнирах,
      * соответствующих определенной дате
+     * @throws JsonProcessingException В случае ошибки при парсинге JSON-строки, представляющей собой список объектов
+     *                                 класса {@link FeaturedEventsByDateDTO}, содержащих информацию о будущих турнирах,
+     *                                 соответствующих определенной дате
      */
-    private ArrayList<FeaturedEventsByDateDTO> sortFeaturedEventsByDate(ArrayList<FeaturedEventDTO> featuredEvents) {
+    private ArrayList<FeaturedEventsByDateDTO> sortFeaturedEventsByDate(ArrayList<FeaturedEventDTO> featuredEvents) throws JsonProcessingException {
         Type listType = new TypeToken<ArrayList<FeaturedEventsByDateDTO>>() {
         }.getType();
-        return new Gson().fromJson(sortEventsByDateByType(featuredEvents, "featuredEvents"), listType);
+        Gson gson = new Gson();
+
+        return gson.fromJson(sortEventsByDateByType(gson.toJson(featuredEvents), "featuredEvents"), listType);
     }
 
 
     /**
      * Метод позволяет распределить турниры по соответствующим датам формата <i>Месяц год</i>
      *
-     * @param objectEventsList список турниров, которые необходимо распределить по датам
+     * @param objectEventsList JSON-строка, представляющая собой список турниров, которые необходимо распределить по датам
      * @param type             тип турниров, которые необходимо распределить:
      *                         <li><b>featuredEvents</b> - будущие турниры. В данном случае происходит сортировка
      *                         объектов класса {@link FeaturedEventDTO}, содержащих информацию о будущих турнирах</li>
@@ -531,9 +552,13 @@ public record TournamentsService(TournamentRepository tournamentRepository, Coun
      *                         объектов класса {@link EndedEventDTO}, содержащих информацию о прошедших турнирах</li>
      * @return JSON-строка, представляющая собой список объектов, содержащих информацию о турнирах, распределенных по
      * соответствующим датам формата <i>Месяц год</i>
+     * @throws JsonProcessingException В случае ошибки при парсинге JSON-строки, представляющей собой список турниров,
+     *                                 которые необходимо распределить по датам
      */
-    private String sortEventsByDateByType(Object objectEventsList, String type) {
-        ArrayList<Object> castedObjectEventsList = (ArrayList<Object>) objectEventsList;
+    private String sortEventsByDateByType(String objectEventsList, String type) throws JsonProcessingException {
+        TypeReference<ArrayList<Object>> listReference = new TypeReference<>() {
+        };
+        ArrayList<Object> castedObjectEventsList = new ObjectMapper().readValue(objectEventsList, listReference);
 
         ArrayList<Object> sortedEvents = new ArrayList<>();
 

@@ -7,6 +7,7 @@ import com.example.kast.controllers.dto.tournaments.OngoingEventDTO;
 import com.example.kast.exceptions.AppException;
 import com.example.kast.mongo_collections.documents.TournamentDoc;
 import com.example.kast.services.TournamentsService;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -29,9 +30,12 @@ public record TournamentsController(TournamentsService tournamentsService) {
      * @param player ник игрока, который просматривает страницу
      * @return <code>ResponseEntity</code> со статусом 200, тело которого - объект класса {@link FullTournamentsDTO},
      * содержащий информацию, необходимую для взаимодействия со страницей "Турниры" на frontend
+     * @throws JsonProcessingException В случае ошибки при парсинге JSON-строки, представляющей список объектов,
+     *                                 содержащих информацию о будущих или завершенных турнирах, соответствующих
+     *                                 определенной дате
      */
     @GetMapping(value = "/getFullTournaments/{player}")
-    public ResponseEntity<FullTournamentsDTO> getFullTournaments(@PathVariable("player") String player) {
+    public ResponseEntity<FullTournamentsDTO> getFullTournaments(@PathVariable("player") String player) throws JsonProcessingException {
         return ResponseEntity.ok(tournamentsService.getFullTournaments(player));
     }
 
