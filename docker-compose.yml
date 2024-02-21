@@ -23,6 +23,9 @@ services:
         context: ./backend
         dockerfile: Dockerfile
     restart: always
+    environment:
+      SPRING_DATA_MONGODB_HOST: db
+      SPRING_DATA_MONGODB_PORT: 27017
     ports:
       - 8080:8080
     depends_on:
