@@ -7,9 +7,13 @@ import com.example.kast.exceptions.AppException;
 import com.example.kast.mongo_collections.documents.*;
 import com.example.kast.mongo_collections.embedded.Requests;
 import com.example.kast.mongo_collections.interfaces.*;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.reflect.TypeToken;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
+import java.lang.reflect.Type;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -235,15 +239,18 @@ public record TournamentsService(TournamentRepository tournamentRepository, Coun
 
 
     /**
-     * Метод приводит полученный список объектов, содержащих информацию о завершенных турнирах, к списку объектов
-     * класса {@link EndedEventDTO}, а затем сортирует их по дате начала
+     * Метод приводит полученную JSON-строку, представляющую собой список объектов, содержащих информацию о завершенных
+     * турнирах, к списку объектов класса {@link EndedEventDTO}, а затем сортирует их по дате начала
      *
      * @param tournamentDocList список турниров, среди которых проводится поиск завершенных турниров
      * @return Список объектов класса {@link EndedEventsByDateDTO}, содержащих информацию о прошедших турнирах,
      * соответствующих определенной дате
      */
     private ArrayList<EndedEventsByDateDTO> getEndedEvents(List<TournamentDoc> tournamentDocList) {
-        ArrayList<EndedEventDTO> endedEvents = (ArrayList<EndedEventDTO>) getEventsByType(tournamentDocList, "ended");
+        Type listType = new TypeToken<ArrayList<EndedEventDTO>>() {
+        }.getType();
+        ArrayList<EndedEventDTO> endedEvents = new GsonBuilder().create().fromJson(getEventsByType(tournamentDocList, "ended"), listType);
+
         Collections.reverse(endedEvents);
 
         return sortEndedEventsByDate(endedEvents);
@@ -275,15 +282,18 @@ public record TournamentsService(TournamentRepository tournamentRepository, Coun
 
 
     /**
-     * Метод приводит полученный список объектов, содержащих информацию о будущих турнирах, к списку объектов
-     * класса {@link FeaturedEventDTO}, а затем сортирует их по дате начала
+     * Метод приводит полученную JSON-строку, представляющую собой список объектов, содержащих информацию о будущих
+     * турнирах, к списку объектов класса {@link FeaturedEventDTO}, а затем сортирует их по дате начала
      *
      * @param tournamentDocList список турниров, среди которых проводится поиск будущих турниров
      * @return Список объектов класса {@link FeaturedEventsByDateDTO}, содержащих информацию о будущих турнирах,
      * соответствующих определенной дате
      */
     private ArrayList<FeaturedEventsByDateDTO> getFeaturedEvents(List<TournamentDoc> tournamentDocList) {
-        ArrayList<FeaturedEventDTO> featuredEvents = (ArrayList<FeaturedEventDTO>) getEventsByType(tournamentDocList, "upcoming");
+        Type listType = new TypeToken<ArrayList<FeaturedEventDTO>>() {
+        }.getType();
+        ArrayList<FeaturedEventDTO> featuredEvents = new Gson().fromJson(getEventsByType(tournamentDocList, "upcoming"), listType);
+
         return sortFeaturedEventsByDate(featuredEvents);
     }
 
@@ -322,15 +332,17 @@ public record TournamentsService(TournamentRepository tournamentRepository, Coun
 
 
     /**
-     * Метод приводит полученный список объектов, содержащих информацию о текущих турнирах, к списку объектов
-     * класса {@link OngoingEventDTO}
+     * Метод приводит полученную JSON-строку, представляющую список объектов, содержащих информацию о текущих турнирах,
+     * к списку объектов класса {@link OngoingEventDTO}
      *
      * @param tournamentDocList список турниров, среди которых проводится поиск текущих турниров
      * @return Список объектов класса {@link OngoingEventDTO}, содержащих информацию о текущих турнирах, отсортированных
      * по дате начала
      */
     private ArrayList<OngoingEventDTO> getOngoingEvents(List<TournamentDoc> tournamentDocList) {
-        return (ArrayList<OngoingEventDTO>) getEventsByType(tournamentDocList, "ongoing");
+        Type listType = new TypeToken<ArrayList<OngoingEventDTO>>() {
+        }.getType();
+        return new Gson().fromJson(getEventsByType(tournamentDocList, "ongoing"), listType);
     }
 
 
@@ -383,10 +395,10 @@ public record TournamentsService(TournamentRepository tournamentRepository, Coun
      *                          <li><b>ongoing</b> - текущие турниры</li>
      *                          <li><b>upcoming</b> - будущие турниры</li>
      *                          <li><b>ended</b> - завершенные турниры</li>
-     * @return Список объектов, содержащих информацию о турнирах, соответствующих запрашиваемому типу и отсортированных
-     * по дате начала
+     * @return JSON-строка, представляющая собой список объектов, содержащих информацию о турнирах, соответствующих
+     * запрашиваемому типу и отсортированных по дате начала
      */
-    private Object getEventsByType(List<TournamentDoc> tournamentDocList, String type) {
+    private String getEventsByType(List<TournamentDoc> tournamentDocList, String type) {
         ArrayList<Object> eventsList = new ArrayList<>();
 
         for (TournamentDoc tournament : tournamentDocList) {
@@ -407,7 +419,7 @@ public record TournamentsService(TournamentRepository tournamentRepository, Coun
             }
         }
 
-        return eventsList;
+        return new Gson().toJson(eventsList);
     }
 
 
@@ -475,15 +487,17 @@ public record TournamentsService(TournamentRepository tournamentRepository, Coun
 
 
     /**
-     * Метод приводит полученный список объектов, содержащих информацию о завершенных турнирах, распределенных по
-     * соответствующим датам типа <i>Месяц год</i>, к списку объектов класса {@link EndedEventsByDateDTO}
+     * Метод приводит полученную JSON-строку, представляющую собой список объектов, содержащих информацию о завершенных
+     * турнирах, распределенных по соответствующим датам типа <i>Месяц год</i>, к списку объектов класса {@link EndedEventsByDateDTO}
      *
      * @param endedEvents список объектов класса {@link EndedEventDTO}, содержащий информацию о завершенных турнирах
      * @return Список объектов класса {@link EndedEventsByDateDTO}, содержащих информацию о прошедших турнирах,
      * соответствующих определенной дате
      */
     private ArrayList<EndedEventsByDateDTO> sortEndedEventsByDate(ArrayList<EndedEventDTO> endedEvents) {
-        ArrayList<EndedEventsByDateDTO> sortedEvents = (ArrayList<EndedEventsByDateDTO>) sortEventsByDateByType(endedEvents, "endedEvents");
+        Type listType = new TypeToken<ArrayList<EndedEventsByDateDTO>>() {
+        }.getType();
+        ArrayList<EndedEventsByDateDTO> sortedEvents = new Gson().fromJson(sortEventsByDateByType(endedEvents, "endedEvents"), listType);
         Collections.reverse(sortedEvents);
 
         return sortedEvents;
@@ -491,15 +505,18 @@ public record TournamentsService(TournamentRepository tournamentRepository, Coun
 
 
     /**
-     * Метод приводит полученный список объектов, содержащих информацию о будущих турнирах, распределенных по
-     * соответствующим датам типа <i>Месяц год</i>, к списку объектов класса {@link FeaturedEventsByDateDTO}
+     * Метод приводит полученную JSON-строку, представляющую собой список объектов, содержащих информацию о будущих
+     * турнирах, распределенных по соответствующим датам типа <i>Месяц год</i>, к списку объектов класса
+     * {@link FeaturedEventsByDateDTO}
      *
      * @param featuredEvents список объектов класса {@link FeaturedEventDTO}, содержащий информацию о будущих турнирах
      * @return Список объектов класса {@link FeaturedEventsByDateDTO}, содержащих информацию о будущих турнирах,
      * соответствующих определенной дате
      */
     private ArrayList<FeaturedEventsByDateDTO> sortFeaturedEventsByDate(ArrayList<FeaturedEventDTO> featuredEvents) {
-        return (ArrayList<FeaturedEventsByDateDTO>) sortEventsByDateByType(featuredEvents, "featuredEvents");
+        Type listType = new TypeToken<ArrayList<FeaturedEventsByDateDTO>>() {
+        }.getType();
+        return new Gson().fromJson(sortEventsByDateByType(featuredEvents, "featuredEvents"), listType);
     }
 
 
@@ -512,10 +529,10 @@ public record TournamentsService(TournamentRepository tournamentRepository, Coun
      *                         объектов класса {@link FeaturedEventDTO}, содержащих информацию о будущих турнирах</li>
      *                         <li><b>endedEvents</b> - завершенные турниры. В данном случае происходит сортировка
      *                         объектов класса {@link EndedEventDTO}, содержащих информацию о прошедших турнирах</li>
-     * @return Список объектов, содержащих информацию о турнирах, распределенных по соответствующим датам формата
-     * <i>Месяц год</i>
+     * @return JSON-строка, представляющая собой список объектов, содержащих информацию о турнирах, распределенных по
+     * соответствующим датам формата <i>Месяц год</i>
      */
-    private Object sortEventsByDateByType(Object objectEventsList, String type) {
+    private String sortEventsByDateByType(Object objectEventsList, String type) {
         ArrayList<Object> castedObjectEventsList = (ArrayList<Object>) objectEventsList;
 
         ArrayList<Object> sortedEvents = new ArrayList<>();
@@ -552,7 +569,7 @@ public record TournamentsService(TournamentRepository tournamentRepository, Coun
         else
             sortedEvents.sort(Comparator.comparingInt(o -> parseHeaderDateToEpochDays(((EndedEventsByDateDTO) o).getDate())));
 
-        return sortedEvents;
+        return new Gson().toJson(sortedEvents);
     }
 
 

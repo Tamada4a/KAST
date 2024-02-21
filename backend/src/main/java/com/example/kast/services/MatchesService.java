@@ -13,9 +13,12 @@ import com.example.kast.mongo_collections.embedded.Matches;
 import com.example.kast.mongo_collections.interfaces.AdminRepository;
 import com.example.kast.mongo_collections.interfaces.TeamRepository;
 import com.example.kast.mongo_collections.interfaces.TournamentRepository;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
+import java.lang.reflect.Type;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -252,14 +255,15 @@ public record MatchesService(TournamentRepository tournamentRepository, TeamRepo
 
 
     /**
-     * Метод приводит полученный список объектов, содержащих информацию о текущих матчах, к списку объектов класса
-     * {@link MatchDTO}, а затем сортирует матчи по времени начала
+     * Метод приводит полученную JSON-строку, представляющую собой список объектов, содержащих информацию о текущих матчах,
+     * к списку объектов класса {@link MatchDTO}, а затем сортирует матчи по времени начала
      *
      * @return Список объектов класса {@link MatchDTO}, содержащих информацию о текущих матчах, отсортированных по
      * времени начала
      */
     private ArrayList<MatchDTO> getAllOngoingMatches() {
-        ArrayList<MatchDTO> ongoingMatches = (ArrayList<MatchDTO>) getAllMatchesByType("ongoingMatches");
+        Type listType = new TypeToken<ArrayList<MatchDTO>>() {}.getType();
+        ArrayList<MatchDTO> ongoingMatches = new Gson().fromJson(getAllMatchesByType("ongoingMatches"), listType);
 
         ongoingMatches.sort(Comparator.comparingInt(o -> LocalTime.parse(o.getTime()).toSecondOfDay()));
 
@@ -268,14 +272,15 @@ public record MatchesService(TournamentRepository tournamentRepository, TeamRepo
 
 
     /**
-     * Метод приводит полученный список объектов, содержащих информацию о будущих матчах, к списку объектов класса
-     * {@link MatchTimeByDateDTO}, а затем сортирует матчи по дате начала
+     * Метод приводит полученную JSON-строку, представляющую собой список объектов, содержащих информацию о будущих матчах,
+     * к списку объектов класса {@link MatchTimeByDateDTO}, а затем сортирует матчи по дате начала
      *
      * @return Список объектов класса {@link MatchTimeByDateDTO}, содержащих информацию о ближайших матчах,
      * отсортированных по дате начала
      */
     private ArrayList<MatchTimeByDateDTO> getAllUpcomingMatches() {
-        ArrayList<MatchTimeDTO> upcomingMatches = (ArrayList<MatchTimeDTO>) getAllMatchesByType("upcomingMatches");
+        Type listType = new TypeToken<ArrayList<MatchTimeDTO>>() {}.getType();
+        ArrayList<MatchTimeDTO> upcomingMatches = new Gson().fromJson(getAllMatchesByType("upcomingMatches"), listType);
 
         return sortMatchesByDateTime(upcomingMatches, "notreversed");
     }
@@ -287,9 +292,9 @@ public record MatchesService(TournamentRepository tournamentRepository, TeamRepo
      * @param type тип матчей, который необходимо получить:
      *             <li><b>upcomingMatches</b> - ближайшие матчи</li>
      *             <li><b>ongoingMatches</b> - текущие матчи</li>
-     * @return Список объектов, содержащий информацию о всех ближайших или текущих матчах
+     * @return JSON-строка, представляющая собой список объектов, содержащий информацию о всех ближайших или текущих матчах
      */
-    private Object getAllMatchesByType(String type) {
+    private String getAllMatchesByType(String type) {
         ArrayList<Object> matchesList = new ArrayList<>();
 
         List<TournamentDoc> tournamentDocList = tournamentRepository.findAll();
@@ -304,7 +309,7 @@ public record MatchesService(TournamentRepository tournamentRepository, TeamRepo
             }
         }
 
-        return matchesList;
+        return new Gson().toJson(matchesList);
     }
 
 

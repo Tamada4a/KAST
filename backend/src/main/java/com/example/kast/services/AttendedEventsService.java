@@ -14,9 +14,12 @@ import com.example.kast.mongo_collections.embedded.Rosters;
 import com.example.kast.mongo_collections.interfaces.PlayerRepository;
 import com.example.kast.mongo_collections.interfaces.TeamRepository;
 import com.example.kast.mongo_collections.interfaces.TournamentRepository;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
+import java.lang.reflect.Type;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -40,8 +43,8 @@ import static com.example.kast.utils.Utils.*;
 public record AttendedEventsService(PlayerRepository playerRepository, TournamentRepository tournamentRepository,
                                     TeamRepository teamRepository) {
     /**
-     * Метод приводит полученный список объектов, содержащий информацию о посещенных пользователем турнирах к классу
-     * {@link AttendedEventDTO}
+     * Метод приводит полученную JSON-строку, представляющую собой список объектов, содержащий информацию о посещенных
+     * пользователем турнирах к классу {@link AttendedEventDTO}
      *
      * @param player ник пользователя, чьи посещенные турниры необходимо получить
      * @return Список объектов класса {@link AttendedEventDTO}, содержащих информацию о посещенных пользователем турнирах
@@ -51,20 +54,22 @@ public record AttendedEventsService(PlayerRepository playerRepository, Tournamen
         if (!playerRepository.existsByNick(player))
             throw new AppException("Неизвестный пользователь", HttpStatus.NOT_FOUND);
 
-        return (ArrayList<AttendedEventDTO>) getAttendedEndedPlayerEvents(player, "attendedEvents");
+        Type listType = new TypeToken<ArrayList<AttendedEventDTO>>() {}.getType();
+        return new Gson().fromJson(getAttendedEndedPlayerEvents(player, "attendedEvents"), listType);
     }
 
 
     /**
-     * Метод приводит полученный список объектов, содержащих информацию о завершенных турнирах, где пользователь
-     * занимал призовые места, к списку объектов класса {@link EventInfoDTO}
+     * Метод приводит полученный JSON-строку, представляющую список объектов, содержащих информацию о завершенных турнирах,
+     * где пользователь занимал призовые места, к списку объектов класса {@link EventInfoDTO}
      *
      * @param player ник пользователя, чьи завершенные турниры необходимо получить
      * @return Список объектов класса {@link EventInfoDTO}, содержащих информацию о завершенных турнирах, где
      * пользователь занимал призовые места
      */
     public ArrayList<EventInfoDTO> getPlayerEndedEvents(String player) {
-        return (ArrayList<EventInfoDTO>) getAttendedEndedPlayerEvents(player, "endedEvents");
+        Type listType = new TypeToken<ArrayList<EventInfoDTO>>() {}.getType();
+        return new Gson().fromJson(getAttendedEndedPlayerEvents(player, "endedEvents"), listType);
     }
 
 
@@ -203,10 +208,10 @@ public record AttendedEventsService(PlayerRepository playerRepository, Tournamen
      *               {@link AttendedEventDTO}, содержащих информацию о посещенных турнирах</li>
      *               <li><b>endedEvents</b> - завершенные турниры. В данном случае происходит поиск объектов класса
      *               {@link EventInfoDTO}, содержащих информацию о завершенных турнирах</li>
-     * @return Список объектов, содержащих информацию о посещенных пользователем турнирах, либо о завершенных турнирах,
-     * в которых пользователь занял призовые места
+     * @return JSON-строка, представляющая собой список объектов, содержащих информацию о посещенных пользователем
+     * турнирах, либо о завершенных турнирах, в которых пользователь занял призовые места
      */
-    private Object getAttendedEndedPlayerEvents(String player, String type) {
+    private String getAttendedEndedPlayerEvents(String player, String type) {
         PlayerDoc playerDoc = playerRepository.findByNick(player);
 
         List<TournamentDoc> tournamentDocs = tournamentRepository.findAll();
@@ -279,7 +284,7 @@ public record AttendedEventsService(PlayerRepository playerRepository, Tournamen
                         parseStringDateToEpochDays(((EventInfoDTO) o).getDate().substring(0, 10))));
             Collections.reverse(playerEvents);
         }
-        return playerEvents;
+        return new Gson().toJson(playerEvents);
     }
 
 
