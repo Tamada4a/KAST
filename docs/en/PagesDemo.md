@@ -37,6 +37,7 @@ If the user is an administrator, he can change the top:
 ![Edit top](https://github.com/Tamada4a/KAST/blob/main/assets/11.%20Edit%20tems%20top.png)
 
 ## Player Profile
+### Overview
 On this page you can see information about the player: nickname, photo, his current team, age and social networks, if they are linked
 ![Player Profile](https://github.com/Tamada4a/KAST/blob/main/assets/1.%20Player%20profile.png)
 
@@ -51,8 +52,11 @@ The player's event, divided into two tabs: "Upcoming and Ongoing" and "Ended"
 The player's achievements are divided into two tabs: "Lan" and "Online"
 ![Lan player achievements](https://github.com/Tamada4a/KAST/blob/main/assets/15.%20Player%20lan%20achievements.png)
 
-<br></br>All the player's teams are:
+All the player's teams are:
 ![All player's teams](https://github.com/Tamada4a/KAST/blob/main/assets/16.%20Player%20rosters.png)
+
+### Updating the player's photo
+For a high-quality display of the user's photo, it is necessary to upload a photo in the size of 305x484. An <a href="https://github.com/Tamada4a/LAST/blog/main/backend/images/players/NonPhoto.png">example</a> of a player's photo.
 
 ## Team page
 On this page, the user can find information about the relevant command
