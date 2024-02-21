@@ -56,7 +56,7 @@ All the player's teams are:
 ![All player's teams](https://github.com/Tamada4a/KAST/blob/main/assets/16.%20Player%20rosters.png)
 
 ### Updating the player's photo
-For a high-quality display of the user's photo, it is necessary to upload a photo in the size of 305x484. An <a href="https://github.com/Tamada4a/LAST/blog/main/backend/images/players/NonPhoto.png">example</a> of a player's photo.
+For a high-quality display of the user's photo, it is necessary to upload a photo in the size of 305x484. An <a href="https://github.com/Tamada4a/KAST/blob/main/backend/images/players/NonPhoto.png">example</a> of a player's photo.
 
 ## Team page
 On this page, the user can find information about the relevant command
